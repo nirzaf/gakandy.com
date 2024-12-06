@@ -3,40 +3,40 @@ import { motion } from 'framer-motion';
 
 const features = [
   {
-    name: 'Business Growth',
-    description: 'We help accelerate your business growth with expert guidance.',
-    icon: Target,
-    gradient: 'from-blue-400 to-indigo-600',
-  },
-  {
-    name: 'Unlimited Revision',
-    description: 'We ensure complete satisfaction through unlimited revisions.',
-    icon: Clock,
-    gradient: 'from-emerald-400 to-teal-600',
-  },
-  {
-    name: 'Ultimate Perfection',
-    description: 'We strive for excellence in every service we provide.',
-    icon: Star,
-    gradient: 'from-amber-400 to-orange-600',
-  },
-  {
-    name: 'Smart Experience',
-    description: 'Benefit from our years of industry expertise.',
-    icon: Briefcase,
-    gradient: 'from-purple-400 to-pink-600',
-  },
-  {
-    name: 'Strict Deadline',
-    description: 'We respect and adhere to agreed timelines.',
-    icon: Calendar,
-    gradient: 'from-red-400 to-rose-600',
-  },
-  {
-    name: 'Reputed Firm',
-    description: 'A trusted name in auditing and consultancy services.',
+    name: 'Professional Excellence',
+    description: 'Delivering high-quality auditing and consultancy services with unwavering commitment to excellence.',
     icon: Award,
-    gradient: 'from-cyan-400 to-blue-600',
+    gradient: 'from-[#033A5B] to-[#0C4D75]',
+  },
+  {
+    name: 'Industry Expertise',
+    description: 'Leveraging years of experience to provide comprehensive financial and business solutions.',
+    icon: Briefcase,
+    gradient: 'from-[#084461] to-[#126190]',
+  },
+  {
+    name: 'Client-Centric Approach',
+    description: 'Tailoring our services to meet your specific needs with unlimited support and guidance.',
+    icon: Target,
+    gradient: 'from-[#22B0EB] to-[#28A2D4]',
+  },
+  {
+    name: 'Timely Delivery',
+    description: 'Meeting deadlines consistently while maintaining the highest standards of quality.',
+    icon: Clock,
+    gradient: 'from-[#033A5B] to-[#22B0EB]',
+  },
+  {
+    name: 'Continuous Support',
+    description: 'Providing ongoing assistance and updates to ensure your continued success.',
+    icon: Calendar,
+    gradient: 'from-[#084461] to-[#28A2D4]',
+  },
+  {
+    name: 'Quality Assurance',
+    description: 'Implementing rigorous quality control measures to deliver exceptional results.',
+    icon: Star,
+    gradient: 'from-[#0C4D75] to-[#126190]',
   },
 ];
 
@@ -45,73 +45,84 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.15
     }
   }
 };
 
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 30, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+      duration: 0.6
     }
   }
 };
 
 export default function WhyChooseUs() {
   return (
-    <div className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -skew-y-12 transform bg-blue-50 opacity-50 w-full h-full"></div>
+        <div className="absolute -skew-y-12 transform bg-[#033A5B]/5 w-full h-full"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,176,235,0.04),transparent_40%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,176,235,0.04),transparent_40%)]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="lg:text-center mb-16">
-          <h2 className="text-base font-semibold tracking-wide uppercase text-blue-600">Our Advantages</h2>
-          <p className="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Why Choose Us?
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="lg:text-center mb-16"
+        >
+          <h2 className="text-base font-semibold tracking-wide uppercase text-[#22B0EB]">Why Choose Global Associates</h2>
+          <p className="mt-2 text-4xl font-extrabold text-[#033A5B] sm:text-5xl font-serif">
+            Our Commitment to Excellence
           </p>
-          <div className="mt-4 mx-auto w-24 h-1 bg-blue-600 rounded-full"></div>
-          <p className="mt-6 max-w-3xl text-xl text-gray-500 lg:mx-auto leading-relaxed">
-            We aim to add value to your organisation by offering practical suggestions to improve your systems and manage financial risks.
+          <div className="mt-4 mx-auto w-24 h-1 bg-[#22B0EB] rounded-full"></div>
+          <p className="mt-6 max-w-3xl text-xl text-gray-600 lg:mx-auto leading-relaxed">
+            We are dedicated to delivering exceptional financial services and innovative solutions 
+            that drive your business forward.
           </p>
-        </div>
+        </motion.div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mt-16"
         >
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <motion.div
                 key={feature.name}
                 variants={itemVariants}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl 
-                          transition-all duration-300 p-8 overflow-hidden"
+                className="group relative bg-white rounded-2xl shadow-[0_4px_20px_rgba(3,58,91,0.08)] hover:shadow-[0_8px_30px_rgba(3,58,91,0.12)] 
+                          transition-all duration-500 p-8 overflow-hidden hover:-translate-y-1"
               >
-                {/* Gradient Background */}
-                <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-5 
-                              transition-opacity duration-300 ${feature.gradient}"></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] 
+                              transition-opacity duration-500`}></div>
                 
                 <div className="relative flex flex-col items-start">
-                  <div className={`flex h-16 w-16 items-center justify-center rounded-xl 
+                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl 
                                 bg-gradient-to-r ${feature.gradient} text-white 
-                                transform group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="h-8 w-8" aria-hidden="true" />
+                                transform group-hover:scale-110 transition-transform duration-500`}>
+                    <feature.icon className="h-7 w-7" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-6 text-xl font-bold text-gray-900 group-hover:text-blue-600 
-                              transition-colors duration-300">
+                  <h3 className="mt-6 text-xl font-bold text-[#033A5B] group-hover:text-[#22B0EB] 
+                              transition-colors duration-500">
                     {feature.name}
                   </h3>
-                  <p className="mt-4 text-base text-gray-500 group-hover:text-gray-600 
-                              transition-colors duration-300 leading-relaxed">
+                  <p className="mt-4 text-gray-600 group-hover:text-gray-700 
+                              transition-colors duration-500 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -120,6 +131,6 @@ export default function WhyChooseUs() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
