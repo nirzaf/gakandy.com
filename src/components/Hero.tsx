@@ -100,16 +100,11 @@ export default function Hero() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   style={{
-                    background: 'linear-gradient(145deg, #22B0EB 5%, #28A2D4 50%, #22B0EB 95%)',
+                    background: 'linear-gradient(145deg, #22B0EB 0%, #28A2D4 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-                    textShadow: `
-                      -1px -1px 1px rgba(255,255,255,0.3),
-                      1px 1px 1px rgba(0,0,0,0.3),
-                      2px 2px 4px rgba(34, 176, 235, 0.3),
-                      -2px -2px 4px rgba(255,255,255,0.3)
-                    `,
-                    filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.2))',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                    filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.2))',
                     position: 'relative',
                     padding: '0 4px'
                   }}
