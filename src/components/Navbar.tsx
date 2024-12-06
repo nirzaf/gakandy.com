@@ -100,28 +100,123 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
-              <Home size={18} />
+      <motion.div
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        variants={{
+          open: {
+            opacity: 1,
+            height: "auto",
+            transition: {
+              type: "spring",
+              stiffness: 300,
+              damping: 24,
+              staggerChildren: 0.07,
+            }
+          },
+          closed: {
+            opacity: 0,
+            height: 0,
+            transition: {
+              type: "spring",
+              stiffness: 300,
+              damping: 24,
+              staggerChildren: 0.05,
+              staggerDirection: -1,
+              when: "afterChildren"
+            }
+          }
+        }}
+        className="md:hidden overflow-hidden"
+      >
+        <motion.div 
+          variants={{
+            open: {
+              clipPath: "inset(0% 0% 0% 0%)",
+              transition: {
+                type: "spring",
+                bounce: 0,
+                duration: 0.7,
+                delayChildren: 0.3,
+                staggerChildren: 0.05
+              }
+            },
+            closed: {
+              clipPath: "inset(10% 50% 90% 50%)",
+              transition: {
+                type: "spring",
+                bounce: 0,
+                duration: 0.3
+              }
+            }
+          }}
+          className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm shadow-lg rounded-b-xl"
+        >
+          <motion.div
+            variants={{
+              open: {
+                opacity: 1,
+                y: 0,
+                transition: { type: "spring", stiffness: 300, damping: 24 }
+              },
+              closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+            }}
+          >
+            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
+              <Home size={18} className="text-blue-600" />
               <span>Home</span>
             </Link>
-            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
-              <Users size={18} />
+          </motion.div>
+
+          <motion.div
+            variants={{
+              open: {
+                opacity: 1,
+                y: 0,
+                transition: { type: "spring", stiffness: 300, damping: 24 }
+              },
+              closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+            }}
+          >
+            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
+              <Users size={18} className="text-blue-600" />
               <span>About Us</span>
             </Link>
-            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
-              <Briefcase size={18} />
+          </motion.div>
+
+          <motion.div
+            variants={{
+              open: {
+                opacity: 1,
+                y: 0,
+                transition: { type: "spring", stiffness: 300, damping: 24 }
+              },
+              closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+            }}
+          >
+            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
+              <Briefcase size={18} className="text-blue-600" />
               <span>Services</span>
             </Link>
-            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
-              <PhoneCall size={18} />
+          </motion.div>
+
+          <motion.div
+            variants={{
+              open: {
+                opacity: 1,
+                y: 0,
+                transition: { type: "spring", stiffness: 300, damping: 24 }
+              },
+              closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+            }}
+          >
+            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
+              <PhoneCall size={18} className="text-blue-600" />
               <span>Contact</span>
             </Link>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </nav>
   );
 }
