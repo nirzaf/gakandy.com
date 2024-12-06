@@ -15,10 +15,10 @@ export default function Hero() {
           alt="Hero background"
           className="w-full h-full object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#033A5B]/95 via-[#084461]/90 to-[#0C4D75]/95"></div>
         
         {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-purple-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#033A5B]/30 to-[#22B0EB]/20"></div>
         
         {/* Glass Panels */}
         <motion.div
@@ -27,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="absolute inset-0"
         >
-          <div className="absolute top-20 -left-32 w-96 h-96 bg-blue-500/10 backdrop-blur-3xl rounded-full"></div>
+          <div className="absolute top-20 -left-32 w-96 h-96 bg-[#033A5B]/10 backdrop-blur-3xl rounded-full"></div>
         </motion.div>
       </div>
       
@@ -40,16 +40,16 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="backdrop-blur-sm bg-white/[0.02] py-12 px-6 rounded-2xl shadow-2xl border border-white/10"
+                className="backdrop-blur-sm bg-[#033A5B]/[0.08] py-12 px-6 rounded-2xl shadow-2xl border border-[#22B0EB]/15"
               >
                 {/* Tagline */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="text-lg text-blue-300 font-medium tracking-wide mb-6"
+                  className="text-xl text-[#22B0EB] font-semibold tracking-wide mb-6"
                 >
-                  Goodbye to Accounting Problems
+                  Chartered Accountants & Business Advisors
                 </motion.p>
 
                 {/* Main Title */}
@@ -62,8 +62,8 @@ export default function Hero() {
                   <span className="block text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] bg-clip-text">
                     Global Associates
                   </span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200 mt-2">
-                    Professional Services
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#22B0EB] to-[#28A2D4] mt-2">
+                    Excellence in Service
                   </span>
                 </motion.h1>
 
@@ -72,9 +72,9 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1 }}
-                  className="mt-3 text-lg text-gray-300 sm:mt-5 sm:text-xl max-w-2xl mx-auto leading-relaxed font-light"
+                  className="mt-3 text-lg text-white sm:mt-5 sm:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
                 >
-                  Global Associates is one of top global alliance of expert firms providing high-quality professional services and advice.
+                  A full-service accounting firm delivering transparent, cost-effective solutions with a commitment to exceeding your expectations in financial and legal compliance.
                 </motion.p>
 
                 {/* Buttons */}
@@ -87,9 +87,9 @@ export default function Hero() {
                   {/* Contact Button */}
                   <Link
                     to="/contact"
-                    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl text-white font-medium overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                    className="group relative px-8 py-4 bg-gradient-to-r from-[#033A5B] to-[#0C4D75] rounded-xl text-white font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25"
                   >
-                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-blue-500 transition-all duration-300 group-hover:opacity-90"></div>
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#033A5B] to-[#0C4D75] transition-all duration-300 group-hover:opacity-90"></div>
                     <div className="relative flex items-center">
                       Contact Us
                       <ChevronRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -99,7 +99,7 @@ export default function Hero() {
                   {/* Services Button */}
                   <a
                     href="#services"
-                    className="group relative px-8 py-4 bg-white/10 backdrop-blur-sm rounded-xl text-white font-medium overflow-hidden transition-all duration-300 hover:bg-white/20"
+                    className="group relative px-8 py-4 bg-[#22B0EB]/15 backdrop-blur-sm rounded-xl text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-[#22B0EB]/25"
                   >
                     <div className="relative flex items-center">
                       Our Services
