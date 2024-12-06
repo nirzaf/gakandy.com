@@ -1,34 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import WhyChooseUs from './components/WhyChooseUs';
+import Services from './components/Services';
+import About from './components/About';
+import Footer from './components/Footer';
+import AboutPage from './pages/AboutPage';
+import PartnersPage from './pages/PartnersPage';
+import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
+import ThankYouPage from './pages/ThankYouPage';
+import MissionVision from './components/MissionVision';
+import Performance from './components/Performance';
+import PrimeGlobal from './components/PrimeGlobal';
+import { Toaster } from 'react-hot-toast';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h1 className="text-4xl font-bold text-center text-gray-900">
-            Vite + React + TypeScript + Tailwind
-          </h1>
-          <p className="mt-4 text-center text-gray-600">
-            Edit <code className="font-mono bg-gray-100 p-1 rounded">src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        
-        <div className="flex justify-center">
-          <button
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
-            onClick={() => setCount((count) => count + 1)}
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="bg-site-bg">
+      <Hero />
+      <WhyChooseUs />
+      <PrimeGlobal />
+      <Performance />
+      <Services />
+      <MissionVision />
+      <About />
     </div>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-site-bg">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/thanks" element={<ThankYouPage />} />
+        </Routes>
+        <Footer />
+        <Toaster position="top-right" />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
