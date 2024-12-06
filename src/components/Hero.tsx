@@ -15,14 +15,14 @@ export default function Hero() {
           animate={{ scale: 1, opacity: 0.4 }}
           transition={{ duration: 1.5 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       </div>
 
       {/* Subtle Gradient Overlay */}
       <div className="absolute inset-0 bg-black/20">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#033A5B]/5 via-transparent to-[#22B0EB]/5" />
-        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/30 to-transparent" />
       </div>
 
       {/* Content Container */}
@@ -46,18 +46,87 @@ export default function Hero() {
               className="mb-8"
             >
               <motion.div 
-                className="inline-block mb-2 uppercase font-extrabold tracking-widest text-2xl sm:text-4xl"
+                className="inline-block mb-2 uppercase font-extrabold tracking-widest text-2xl sm:text-4xl relative"
                 style={{
                   textShadow: '0 2px 4px rgba(0,0,0,0.1)',
                   filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.05))'
                 }}
               >
+                {/* Orbit Path */}
+                <div className="absolute -inset-8 -z-10 rounded-full border border-[#22B0EB]/20" />
+                
+                {/* Orbiting Element */}
+                <div className="absolute inset-0 -z-10">
+                  <motion.div
+                    className="relative w-full h-full"
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                  >
+                    <motion.div 
+                      className="absolute"
+                      style={{
+                        top: '-2rem',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '20px',
+                        height: '20px',
+                        background: `conic-gradient(
+                          from 0deg,
+                          #033A5B 0deg,
+                          #0C4D75 120deg,
+                          #22B0EB 240deg,
+                          #033A5B 360deg
+                        )`,
+                        borderRadius: '50%',
+                        boxShadow: '0 0 15px 2px rgba(34, 176, 235, 0.3)'
+                      }}
+                      animate={{ rotate: 360 }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                    />
+                  </motion.div>
+                </div>
+
                 <motion.span 
                   className="inline-block text-[#22B0EB] royal-text"
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
+                  style={{
+                    background: 'linear-gradient(145deg, #22B0EB 5%, #28A2D4 50%, #22B0EB 95%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: `
+                      -1px -1px 1px rgba(255,255,255,0.3),
+                      1px 1px 1px rgba(0,0,0,0.3),
+                      2px 2px 4px rgba(34, 176, 235, 0.3),
+                      -2px -2px 4px rgba(255,255,255,0.3)
+                    `,
+                    filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.2))',
+                    position: 'relative',
+                    padding: '0 4px'
+                  }}
                 >
+                  <div
+                    style={{
+                      content: '""',
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      height: '50%',
+                      background: 'linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%)',
+                      borderRadius: '4px 4px 0 0',
+                      pointerEvents: 'none'
+                    }}
+                  />
                   Global
                 </motion.span>{' '}
                 <motion.span 
