@@ -39,7 +39,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[url('/grid-pattern.png')] bg-center opacity-5" />
 
       {/* Content Container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-20 sm:pt-24 lg:px-8 lg:pt-28">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-28 pb-20 sm:pt-32 lg:px-8 lg:pt-32">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           {/* Main Content */}
           <div className="text-center">
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold tracking-tight text-[#033A5B] sm:text-6xl"
+              className="text-3xl font-bold tracking-tight text-[#033A5B] sm:text-5xl"
             >
               <motion.span 
                 initial={{ letterSpacing: "0.05em", y: 20, opacity: 0 }}
@@ -61,9 +61,10 @@ export default function Hero() {
                     opacity: { duration: 0.8, ease: "easeOut" }
                   }
                 }}
-                className="inline-block mb-2 uppercase font-extrabold tracking-widest"
+                className="inline-block mb-2 uppercase font-extrabold tracking-widest text-2xl sm:text-4xl"
               >
-                Global Associates
+                <span className="text-[#22B0EB]">Global</span>{' '}
+                <span className="text-[#033A5B]">Associates</span>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
@@ -73,7 +74,7 @@ export default function Hero() {
                   delay: 0.3,
                   ease: "easeOut"
                 }}
-                className="block text-2xl sm:text-3xl font-medium text-[#22B0EB] mt-3"
+                className="block text-xl sm:text-2xl font-medium text-gray-600 mt-3"
               >
                 Chartered Accountants
               </motion.span>
@@ -85,7 +86,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto"
             >
-              Expert financial guidance and innovative solutions for your business success.
+              Performance through Excellence
             </motion.p>
 
             {/* CTA Buttons */}
@@ -93,21 +94,22 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-10 flex items-center justify-center gap-x-6"
+              className="mt-10 flex items-center justify-center gap-x-4"
             >
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center gap-x-2 rounded-xl bg-gradient-to-r from-[#033A5B] to-[#0C4D75] px-8 py-4 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25 hover:-translate-y-0.5"
+                className="group relative inline-flex items-center gap-x-2 rounded-xl bg-gradient-to-r from-[#033A5B] to-[#0C4D75] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25 hover:-translate-y-0.5 hover:from-[#0C4D75] hover:to-[#033A5B]"
               >
-                Schedule Consultation
-                <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="relative z-10">Schedule Consultation</span>
+                <ChevronRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#033A5B] to-[#0C4D75] opacity-0 blur transition-opacity duration-300 group-hover:opacity-50" />
               </Link>
               <a
                 href="#services"
-                className="group relative inline-flex items-center gap-x-2 rounded-xl border-2 border-[#033A5B]/10 bg-white/50 px-8 py-4 text-sm font-semibold text-[#033A5B] backdrop-blur-sm transition-all duration-300 hover:bg-white hover:border-[#033A5B]/20 hover:-translate-y-0.5"
+                className="group relative inline-flex items-center gap-x-2 rounded-xl border border-[#033A5B]/20 bg-white/80 px-6 py-3 text-sm font-semibold text-[#033A5B] backdrop-blur-sm transition-all duration-300 hover:bg-white hover:border-[#033A5B]/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#033A5B]/5"
               >
-                Explore Services
-                <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <span>Explore Services</span>
+                <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </motion.div>
 
