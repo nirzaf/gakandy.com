@@ -190,11 +190,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-10 flex items-center justify-center gap-x-6"
+              className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6"
             >
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center gap-x-2 rounded-xl bg-gradient-to-r from-[#033A5B] to-[#22B0EB] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25 hover:-translate-y-0.5 overflow-hidden"
+                className="group relative inline-flex w-full sm:w-auto whitespace-nowrap items-center justify-center gap-x-2 rounded-xl bg-gradient-to-r from-[#033A5B] to-[#22B0EB] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25 hover:-translate-y-0.5 overflow-hidden"
               >
                 <span className="relative z-10">Schedule Consultation</span>
                 <ChevronRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -203,7 +203,7 @@ export default function Hero() {
               
               <Link
                 to="/services"
-                className="group relative inline-flex items-center gap-x-2 rounded-xl border-2 border-[#033A5B]/10 bg-white/80 px-6 py-3.5 text-sm font-semibold text-[#033A5B] backdrop-blur-sm transition-all duration-300 hover:bg-gradient-to-r hover:from-[#033A5B]/5 hover:to-[#22B0EB]/5 hover:border-[#033A5B]/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#033A5B]/5"
+                className="group relative inline-flex w-full sm:w-auto whitespace-nowrap items-center justify-center gap-x-2 rounded-xl border-2 border-[#033A5B]/10 bg-white/80 px-6 py-3.5 text-sm font-semibold text-[#033A5B] backdrop-blur-sm transition-all duration-300 hover:bg-gradient-to-r hover:from-[#033A5B]/5 hover:to-[#22B0EB]/5 hover:border-[#033A5B]/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#033A5B]/5"
               >
                 <span>Explore Services</span>
                 <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
