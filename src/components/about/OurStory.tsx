@@ -6,7 +6,7 @@ export default function OurStory() {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <p className="text-gray-600 leading-relaxed">
-              Salem Taleb Efaifa Auditing and consultancy is an organization of substance with a full-service capability available in Qatar. We construct our team to reflect your organization structure. We make all aspects of our service delivery transparent to the client.
+              Global Associates is an organization of substance with a full-service capability available in Sri Lanka. We construct our team to reflect your organization structure. We make all aspects of our service delivery transparent to the client.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our performance is pre-scheduled, agreed with you for deliverables, timetable, and maximum cost effectiveness. Our aim is to beat your expectations from any assignments. The approach we adopt ensures that we bring our views to you about business operations as well as Financial and legal compliance.

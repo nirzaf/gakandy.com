@@ -1,8 +1,8 @@
 # What is Global Associates Kandy
 
-Global Associates is a top 25 global alliance of expert firms providing high quality professional services and advice. With a rapidly growing global presence made up of accountancy and law firms worldwide, our cross-border service offering facilitates the international operations of businesses of all sizes and ambition, whatever their needs.
+Global Associates is a leading professional services firm based in Kandy, Sri Lanka, offering comprehensive financial and business solutions. With a rapidly growing global presence, we facilitate international operations of businesses of all sizes, providing quality-assured accounting and legal expertise across the globe.
 
-Supporting firm growth and development, we are the global alliance of choice offering clients fast and effective access to quality-assured accounting and legal professionals across the globe.
+Supporting businesses worldwide, we ensure fast and effective access to professional services through our network of experienced professionals and partners.
 
 ## Our Vision
 

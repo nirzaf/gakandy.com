@@ -31,9 +31,15 @@ export default function Hero() {
           </motion.h1>
           <motion.p 
             variants={fadeInUp}
-            className="text-xl md:text-2xl mb-8 text-gray-100"
+            className="text-xl md:text-2xl mb-6 text-gray-100"
           >
-            A top 25 global alliance of expert firms providing high quality professional services and advice. Supporting businesses worldwide with quality-assured accounting and legal expertise.
+            A leading professional services firm based in Kandy, Sri Lanka, offering comprehensive financial and business solutions.
+          </motion.p>
+          <motion.p 
+            variants={fadeInUp}
+            className="text-lg md:text-xl mb-8 text-gray-200"
+          >
+            With a rapidly growing global presence, we facilitate international operations of businesses of all sizes, providing quality-assured accounting and legal expertise across the globe.
           </motion.p>
           <motion.div 
             variants={fadeInUp}
@@ -51,6 +57,28 @@ export default function Hero() {
             >
               Our Services
             </Link>
+          </motion.div>
+          
+          {/* Key Features */}
+          <motion.div
+            variants={staggerContainer}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+          >
+            {[
+              'Professional Excellence',
+              'Global Network',
+              'Local Expertise',
+              'Quality Assurance'
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="text-center"
+              >
+                <div className="w-2 h-2 bg-pictonBlue-primary rounded-full mx-auto mb-3"></div>
+                <p className="text-sm md:text-base font-medium">{feature}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

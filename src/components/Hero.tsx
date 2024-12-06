@@ -60,10 +60,10 @@ export default function Hero() {
                   className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl mb-6"
                 >
                   <span className="block text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] bg-clip-text">
-                    Salem Taleb Efaifa
+                    Global Associates
                   </span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200 mt-2">
-                    Auditing & Consultancy
+                    Professional Services
                   </span>
                 </motion.h1>
 
@@ -74,7 +74,7 @@ export default function Hero() {
                   transition={{ duration: 0.6, delay: 1 }}
                   className="mt-3 text-lg text-gray-300 sm:mt-5 sm:text-xl max-w-2xl mx-auto leading-relaxed font-light"
                 >
-                  Salem Taleb Efaifa Auditing and Consultancy is one of top global alliance of expert firms providing high-quality professional services and advice.
+                  Global Associates is one of top global alliance of expert firms providing high-quality professional services and advice.
                 </motion.p>
 
                 {/* Buttons */}

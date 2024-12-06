@@ -50,52 +50,6 @@ export default function Services() {
   return (
     <div id="services" className="bg-gradient-to-b from-gray-50 to-white pb-8 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions for your business needs
-          </p>
-        </motion.div>
-
-        {/* Value Proposition */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-24"
-        >
-          <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-              <div className="flex-1 space-y-6">
-                <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-                  Adding Value to Your Organization
-                </h3>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  We aim to add value to your organisation by offering practical suggestions to improve your systems and manage financial risks.
-                </p>
-              </div>
-              <div className="flex-1 flex justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20"></div>
-                  <div className="relative w-48 h-48 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full flex items-center justify-center">
-                    <BarChart2 className="w-24 h-24 text-blue-600" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {

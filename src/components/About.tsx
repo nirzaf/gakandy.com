@@ -47,7 +47,7 @@ export default function About() {
                 <div>
                   <h3 className="text-xl font-semibold text-[#00204A] mb-3">Professional Excellence</h3>
                   <p className="text-[#00204A]/70 leading-relaxed">
-                    Salem Taleb Efaifa Auditing and consultancy is an organization of substance with a full-service capability available in Qatar.
+                    Global Associates is an organization of substance with a full-service capability available in Sri Lanka.
                   </p>
                 </div>
               </div>
