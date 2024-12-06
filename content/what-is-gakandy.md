@@ -1,36 +1,40 @@
-# What is Gakandy?
+# What is Global Associates Kandy
 
-Gakandy is a modern web platform that combines elegant design with powerful functionality. Our mission is to deliver exceptional digital experiences that make a lasting impact.
+Global Associates is a top 25 global alliance of expert firms providing high quality professional services and advice. With a rapidly growing global presence made up of accountancy and law firms worldwide, our cross-border service offering facilitates the international operations of businesses of all sizes and ambition, whatever their needs.
+
+Supporting firm growth and development, we are the global alliance of choice offering clients fast and effective access to quality-assured accounting and legal professionals across the globe.
 
 ## Our Vision
 
-At Gakandy, we believe in:
+We engage with our clients on a continuous basis to ensure adherence to statutory and regulatory requirements, including disclosures and provide constructive, value-added delivery. Our mission is to:
 
-- **Innovation**: Pushing the boundaries of what's possible
-- **Quality**: Delivering excellence in every project
-- **User-Centric Design**: Creating experiences that delight users
-- **Sustainability**: Building solutions that stand the test of time
+- **Excellence**: Delivering high-quality professional services
+- **Innovation**: Adapting to changing business environments
+- **Client Focus**: Understanding and meeting client needs
+- **Global Reach**: Providing international expertise with local knowledge
 
 ## Services
 
-### Web Development
-- Custom website development
-- E-commerce solutions
-- Progressive Web Apps (PWAs)
-- Content Management Systems
+### Audit Services
+- **Statutory & Tax Audit**: Opinion on true and fairness of financial statements as required under the statute, accounting standards, IND AS, guidelines by the regulator, income tax provisions and disclosures
+- **Internal Audit**: Evaluating company's internal controls, corporate governance and accounting processes
+- **Forensic Audit**: Detection and prevention of fraud or misappropriation of resources
 
-### Digital Solutions
-- Mobile-first design
-- Performance optimization
-- SEO enhancement
-- Digital transformation
+### Compliance Services
+- **Regulatory Compliance**: Adherence to Sri Lankan regulatory framework
+- **International Standards**: Book keeping as per Sri Lankan GAAP/other GAAPs
+- **Tax Management**: Processing and filing of various tax returns
+- **Payroll Processing**: Complete payroll management and compliance
 
-## Why Choose Gakandy?
-
-1. **Expertise**: Years of experience in web development
-2. **Innovation**: Using cutting-edge technologies
-3. **Support**: Dedicated customer service
-4. **Results**: Proven track record of success
+### Advisory Services
+- **Financial Accounting**: Expertise in major accounting software (Tally ERP, SAGE, NAVISION, SAP, Oracle)
+- **Virtual CFO**: Analytics and business insights for decision making
+- **Business Diagnostics**: Comprehensive checks to identify and remediate compliance gaps
+- **Asset Management**: 
+  - Debtor/Vendor Reconciliation
+  - Inventory Management
+  - Fixed Asset Verification
+- **Process Optimization**: Development of procedure manuals and workflow optimization
 
 ## Get Started
 
