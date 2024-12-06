@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { Star, Lightbulb, Users, Globe } from 'lucide-react';
-import { fadeInUp, staggerContainer } from '../../utils/animations';
+import { fadeInUp, staggerContainer } from '../utils/animations';
 
-const visionPoints = [
+const coreValues = [
   {
     icon: Star,
     title: 'Excellence',
@@ -25,14 +25,14 @@ const visionPoints = [
   },
 ];
 
-export default function Vision() {
+export default function CoreValues() {
   return (
     <motion.section
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="relative py-10 overflow-hidden bg-gradient-to-br from-[#033A5B] to-[#0C4D75]"
+      className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-[#033A5B] to-[#0C4D75]"
     >
       {/* Decorative Elements */}
       <div className="absolute inset-0">
@@ -42,37 +42,46 @@ export default function Vision() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <motion.h2
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+          {/* Text Content */}
+          <div className="text-center lg:text-left">
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#22B0EB] mb-4"
+            >
+              Our Core Values
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="text-base text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              At Global Associates, our values shape everything we do. We believe in delivering excellence through 
+              innovation, maintaining unwavering client focus, and leveraging our global expertise for local success.
+            </motion.p>
+          </div>
+
+          {/* Image Section */}
+          <motion.div
             variants={fadeInUp}
-            className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#22B0EB] mb-3"
+            className="relative group rounded-2xl overflow-hidden"
           >
-            Performance Through Excellence
-          </motion.h2>
-          <motion.p
-            variants={fadeInUp}
-            className="text-base text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            Global Associates is a leading professional services firm based in Kandy, Sri Lanka, providing comprehensive 
-            accounting, auditing, and advisory services. With our strong local presence and international expertise, 
-            we empower businesses of all sizes to achieve their financial goals.
-          </motion.p>
-          <motion.p
-            variants={fadeInUp}
-            className="mt-2 text-base text-[#22B0EB] max-w-2xl mx-auto font-medium italic"
-          >
-            As your trusted partner in business growth and development, we deliver fast and effective access to 
-            quality-assured accounting and advisory solutions that drive success.
-          </motion.p>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#033A5B]/80 via-transparent to-transparent" />
+            <img
+              src="https://ik.imagekit.io/ri5cvrkrr/istockphoto-1328399948-170667a.jpg?updatedAt=1732207359642"
+              alt="Professional Excellence"
+              className="w-full h-[300px] lg:h-[400px] object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
         </div>
 
+        {/* Core Values Grid */}
         <motion.div
           variants={staggerContainer}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
         >
-          {visionPoints.map((point, index) => (
+          {coreValues.map((value, index) => (
             <motion.div
-              key={point.title}
+              key={value.title}
               variants={fadeInUp}
               custom={index}
               className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10
@@ -88,17 +97,17 @@ export default function Vision() {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#22B0EB] to-[#126190] rounded-full opacity-0 
                                   group-hover:opacity-20 transform scale-0 group-hover:scale-150 transition-all duration-300" />
-                    <point.icon className="h-8 w-8 text-[#22B0EB] group-hover:text-white 
+                    <value.icon className="h-8 w-8 text-[#22B0EB] group-hover:text-white 
                                         transform group-hover:rotate-6 transition-all duration-300" />
                   </div>
                 </div>
                 
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#22B0EB] transition-colors duration-300">
-                  {point.title}
+                  {value.title}
                 </h3>
                 
                 <p className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">
-                  {point.description}
+                  {value.description}
                 </p>
               </div>
             </motion.div>
