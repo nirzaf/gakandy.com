@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import OurStory from '../components/about/OurStory';
 import QuoteSection from '../components/about/QuoteSection';
 import Benefits from '../components/about/Benefits';
 import CoreValues from '../components/about/CoreValues';
 import Leadership from '../components/about/Leadership';
 import CompanyOverview from '../components/about/CompanyOverview';
-import { Briefcase, Target } from 'lucide-react';
+import { Briefcase, Target, ChevronDown, ChevronUp, GraduationCap, Award as AwardIcon, Briefcase as BriefcaseIcon } from 'lucide-react';
 import { Shield, Award, Users, Lightbulb, Users2, Scale } from 'lucide-react';
 
 const features = [
@@ -55,6 +56,140 @@ const stats = [
   { value: '500+', label: 'Clients Served' },
   { value: '100%', label: 'Client Satisfaction' },
 ];
+
+const teamMembers = [
+  {
+    name: "Aashikhan Dahalan",
+    position: "Partner at Global Associates Chartered Accountants",
+    image: "https://ik.imagekit.io/d36vkx7c33/gakandy/aashikhan-dahalan.jpg",
+    qualifications: [
+      "Chartered Accountant",
+      "Member of the Institute of Chartered Accountants of Sri Lanka"
+    ],
+    expertise: [
+      "External Audit",
+      "Assurance Services",
+      "Risk Management",
+      "Quality Control",
+      "Corporate Governance"
+    ],
+    experience: [
+      "Extensive experience in audit and assurance",
+      "Leadership in complex audit engagements"
+    ]
+  },
+  {
+    name: "Rizkhan Dahalan",
+    position: "Partner at Global Associates Chartered Accountants",
+    image: "https://ik.imagekit.io/d36vkx7c33/gakandy/rizkhan-dahalan.jpg",
+    qualifications: [
+      "Chartered Accountant",
+      "Member of the Institute of Chartered Accountants of Sri Lanka"
+    ],
+    expertise: [
+      "Corporate Finance",
+      "Business Advisory",
+      "Strategic Planning",
+      "Mergers & Acquisitions",
+      "Financial Management"
+    ],
+    experience: [
+      "Expert in corporate finance advisory",
+      "Leadership in business valuations"
+    ]
+  }
+];
+
+const TeamMemberCard = ({ member }: { member: typeof teamMembers[0] }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <motion.div
+      layout
+      className="bg-white rounded-xl shadow-lg overflow-hidden max-w-2xl mx-auto"
+    >
+      <div className="flex items-start">
+        <motion.div 
+          layout="position"
+          className="relative w-48 h-48 flex-shrink-0 rounded-l-xl overflow-hidden"
+        >
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+
+        <div className="flex-1 p-6">
+          <h3 className="text-2xl font-bold text-[#033A5B] mb-1">{member.name}</h3>
+          <p className="text-gray-600 mb-4">{member.position}</p>
+          
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center justify-between w-full text-[#033A5B] font-medium"
+          >
+            <span>View {isExpanded ? 'Less' : 'More'}</span>
+            {isExpanded ? (
+              <ChevronUp className="w-5 h-5" />
+            ) : (
+              <ChevronDown className="w-5 h-5" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden px-6 pb-6"
+          >
+            <div className="pt-4 space-y-6">
+              <div>
+                <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                  <GraduationCap className="w-5 h-5" />
+                  <h4>Qualifications</h4>
+                </div>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  {member.qualifications.map((qual, index) => (
+                    <li key={index}>{qual}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                  <AwardIcon className="w-5 h-5" />
+                  <h4>Areas of Expertise</h4>
+                </div>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  {member.expertise.map((exp, index) => (
+                    <li key={index}>{exp}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                  <BriefcaseIcon className="w-5 h-5" />
+                  <h4>Professional Experience</h4>
+                </div>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  {member.experience.map((exp, index) => (
+                    <li key={index}>{exp}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+};
 
 export default function AboutPage() {
   return (
@@ -274,6 +409,32 @@ export default function AboutPage() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#033A5B] mb-4">
+              Our Leadership Team
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Meet our experienced partners who lead Global Associates with expertise and dedication
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {teamMembers.map((member, index) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
           </div>
         </div>
       </section>
