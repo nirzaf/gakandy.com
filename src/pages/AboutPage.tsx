@@ -9,6 +9,29 @@ import CompanyOverview from '../components/about/CompanyOverview';
 import { Briefcase, Target } from 'lucide-react';
 import { Shield, Award, Users, Lightbulb, Users2, Scale } from 'lucide-react';
 
+const features = [
+  {
+    title: 'Full-Service Capability',
+    description: 'A professional services firm offering comprehensive financial and business solutions in Sri Lanka.',
+    icon: Briefcase,
+  },
+  {
+    title: 'Client-Focused Structure',
+    description: 'We construct our team to reflect your organizational structure for optimal service delivery.',
+    icon: Users,
+  },
+  {
+    title: 'Transparent Approach',
+    description: 'All aspects of our service delivery are made transparent to ensure client satisfaction.',
+    icon: Shield,
+  },
+  {
+    title: 'Diverse Services',
+    description: 'From accounting and auditing to business advisory and system implementation.',
+    icon: Award,
+  },
+];
+
 export default function AboutPage() {
   return (
     <motion.div 
@@ -17,9 +40,49 @@ export default function AboutPage() {
       transition={{ duration: 0.5 }}
       className="pt-20 bg-gradient-to-b from-white to-gray-50"
     >
-      {/* Company Overview with updated colors */}
-      <section className="bg-gradient-to-r from-indigoDye-500 to-indigoDye-600 py-8">
-        <CompanyOverview />
+      {/* Company Overview Section */}
+      <section className="relative bg-gradient-to-b from-white to-gray-50 py-24 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold tracking-tight text-[#033A5B] sm:text-4xl">
+              Company Overview
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
+              Global Associates Kandy is a leading professional services firm based in Kandy, Sri Lanka, 
+              offering a diverse range of financial and business services.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative group"
+              >
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#033A5B] to-[#22B0EB] rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300"></div>
+                <div className="relative flex flex-col h-full bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-[#033A5B] to-[#22B0EB] p-2 mb-4">
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#033A5B] mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Our Story with updated styling */}
