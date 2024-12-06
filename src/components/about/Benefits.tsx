@@ -37,8 +37,6 @@ export default function Benefits() {
       </div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[url('/grid-pattern.png')] bg-center opacity-[0.02]" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center mb-16">
