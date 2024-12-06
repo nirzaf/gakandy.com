@@ -1,12 +1,13 @@
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-interface ButtonProps extends HTMLMotionProps<"button"> {
+interface ButtonProps extends Omit<HTMLMotionProps<"button">, 'children'> {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   fullWidth?: boolean;
+  children: ReactNode;
 }
 
 export default function Button({
