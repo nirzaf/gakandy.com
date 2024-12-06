@@ -249,7 +249,6 @@ const ServicesPage = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-[#033A5B] to-[#0C4D75] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#033A5B]/30 to-[#033A5B]/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
