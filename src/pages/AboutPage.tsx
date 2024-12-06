@@ -32,6 +32,31 @@ const features = [
   },
 ];
 
+const timelineItems = [
+  {
+    year: '2010',
+    description: 'Founded as a small accounting practice in Kandy, focusing on local businesses.',
+  },
+  {
+    year: '2015',
+    description: 'Expanded services to include comprehensive auditing and business advisory.',
+  },
+  {
+    year: '2018',
+    description: 'Established partnerships with international firms to enhance service capabilities.',
+  },
+  {
+    year: '2023',
+    description: 'Recognized as one of the leading professional services firms in the region.',
+  },
+];
+
+const stats = [
+  { value: '25+', label: 'Years Experience' },
+  { value: '500+', label: 'Clients Served' },
+  { value: '100%', label: 'Client Satisfaction' },
+];
+
 export default function AboutPage() {
   return (
     <motion.div 
@@ -85,50 +110,193 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story with updated styling */}
-      <section className="bg-white py-8">
-        <OurStory />
+      {/* Our Story Section */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#033A5B]/5 to-[#22B0EB]/5" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#033A5B] via-[#22B0EB] to-[#126190]" />
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Timeline */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="absolute left-8 top-0 h-full w-0.5 bg-gradient-to-b from-[#033A5B] via-[#22B0EB] to-[#126190]" />
+              
+              {/* Timeline Items */}
+              {timelineItems.map((item, index) => (
+                <motion.div
+                  key={item.year}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="relative mb-12 last:mb-0 pl-16"
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-[29px] top-1.5 w-3 h-3 rounded-full bg-gradient-to-r from-[#033A5B] to-[#22B0EB] shadow-lg transform -translate-x-1/2">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#033A5B] to-[#22B0EB] animate-ping opacity-20" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="group">
+                    <h3 className="text-xl font-bold text-[#033A5B] mb-2 group-hover:text-[#22B0EB] transition-colors duration-300">
+                      {item.year}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Right Column - Story Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="relative"
+            >
+              {/* Decorative pattern */}
+              <div className="absolute -right-4 -top-4 w-72 h-72 bg-gradient-to-br from-[#033A5B]/10 to-[#22B0EB]/10 rounded-full blur-3xl" />
+              
+              <div className="relative bg-white rounded-2xl p-8 shadow-xl">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <h2 className="text-3xl font-bold text-[#033A5B] mb-6">Our Story</h2>
+                  <div className="prose prose-lg text-gray-600">
+                    <p className="mb-6">
+                      Global Associates Kandy was founded with a vision to provide exceptional professional services
+                      to businesses in Sri Lanka. Our journey began with a commitment to excellence and a deep
+                      understanding of local business needs.
+                    </p>
+                    <p className="mb-6">
+                      Over the years, we have grown into a trusted partner for businesses across various sectors,
+                      delivering innovative solutions and maintaining the highest standards of professional service.
+                    </p>
+                    <p>
+                      Today, we continue to evolve and adapt to meet the changing needs of our clients while
+                      staying true to our core values of integrity, excellence, and client focus.
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                      className="text-center group"
+                    >
+                      <div className="text-4xl font-bold bg-gradient-to-r from-[#033A5B] to-[#22B0EB] bg-clip-text text-transparent group-hover:from-[#22B0EB] group-hover:to-[#033A5B] transition-all duration-300">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm font-medium text-gray-600 mt-2">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
-      {/* Mission & Vision with brand colors */}
-      <section className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* Vision Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <div className="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full bg-gradient-to-br from-[#033A5B] to-[#22B0EB] opacity-10 blur-2xl"></div>
-            <div className="relative">
-              <Target className="h-8 w-8 text-[#033A5B] mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To be the trusted leader in professional services, setting industry standards through 
-                innovation, expertise, and unwavering commitment to excellence in everything we do.
-              </p>
-            </div>
-          </motion.div>
+      {/* Vision & Mission Section */}
+      <section className="relative py-24 overflow-hidden bg-gradient-to-br from-white to-gray-50">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#033A5B] via-[#22B0EB] to-[#126190]" />
+        <div className="absolute -left-64 -top-64 w-[500px] h-[500px] rounded-full bg-[#033A5B]/5 blur-3xl" />
+        <div className="absolute -right-64 -bottom-64 w-[500px] h-[500px] rounded-full bg-[#22B0EB]/5 blur-3xl" />
 
-          {/* Mission Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <div className="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full bg-gradient-to-br from-[#22B0EB] to-[#033A5B] opacity-10 blur-2xl"></div>
-            <div className="relative">
-              <Briefcase className="h-8 w-8 text-[#22B0EB] mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To empower our clients' success by delivering exceptional professional services through 
-                innovative solutions, ethical practices, and lasting partnerships built on trust.
-              </p>
-            </div>
-          </motion.div>
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Vision Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative group"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#033A5B] to-[#22B0EB] rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-300" />
+              <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#033A5B] to-[#22B0EB] p-4 transform -rotate-6 group-hover:rotate-0 transition-transform duration-300">
+                    <Target className="w-full h-full text-white" />
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <h2 className="text-2xl font-bold text-[#033A5B] mb-4 group-hover:text-[#126190] transition-colors duration-300">
+                  Our Vision
+                </h2>
+                <p className="text-gray-600 leading-relaxed relative">
+                  <span className="absolute -left-4 top-0 text-4xl text-[#22B0EB]/10 font-serif">"</span>
+                  To be the trusted leader in professional services, setting industry standards through innovation, expertise, and unwavering commitment to excellence in everything we do.
+                  <span className="absolute -right-4 bottom-0 text-4xl text-[#22B0EB]/10 font-serif">"</span>
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Mission Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative group"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#22B0EB] to-[#126190] rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-300" />
+              <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#22B0EB] to-[#126190] p-4 transform rotate-6 group-hover:rotate-0 transition-transform duration-300">
+                    <Briefcase className="w-full h-full text-white" />
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <h2 className="text-2xl font-bold text-[#033A5B] mb-4 group-hover:text-[#22B0EB] transition-colors duration-300">
+                  Our Mission
+                </h2>
+                <p className="text-gray-600 leading-relaxed relative">
+                  <span className="absolute -left-4 top-0 text-4xl text-[#22B0EB]/10 font-serif">"</span>
+                  To empower our clients' success by delivering exceptional professional services through innovative solutions, ethical practices, and lasting partnerships built on trust.
+                  <span className="absolute -right-4 bottom-0 text-4xl text-[#22B0EB]/10 font-serif">"</span>
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="bg-white py-8">
+        <Leadership />
+      </section>
+
+      {/* Why Choose Us with brand accent */}
+      <section className="bg-white py-8">
+        <WhyChooseUs />
+      </section>
+
+      {/* Benefits with subtle gradient */}
+      <section className="bg-gradient-to-r from-pictonBlue-50 to-pictonBlue-100 py-8">
+        <Benefits />
+      </section>
+
+      {/* Quote Section with deep brand color */}
+      <section className="bg-indigoDye-600 py-8">
+        <QuoteSection />
       </section>
 
       {/* Core Values with brand colors */}
@@ -276,26 +444,6 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="bg-gradient-to-r from-indigoDye-100 to-indigoDye-200 py-8">
-        <Leadership />
-      </section>
-
-      {/* Why Choose Us with brand accent */}
-      <section className="bg-white py-8">
-        <WhyChooseUs />
-      </section>
-
-      {/* Benefits with subtle gradient */}
-      <section className="bg-gradient-to-r from-pictonBlue-50 to-pictonBlue-100 py-8">
-        <Benefits />
-      </section>
-
-      {/* Quote Section with deep brand color */}
-      <section className="bg-indigoDye-600 py-8">
-        <QuoteSection />
       </section>
     </motion.div>
   );
