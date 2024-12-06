@@ -1,12 +1,6 @@
-<!-- GA  -->
-![](https://web-api.textin.com/ocr_image/external/8c224eeeb22b2894.jpg)
-
 GLOBAL ASSOCIATES
 
 Chartered Accountants
-
-
-![](https://web-api.textin.com/ocr_image/external/e09e85c91adb0afb.jpg)
 
 # PERFORMANCE THROUGH EXCELLENCE
 
@@ -21,7 +15,7 @@ Global Associates is an organization of substance with a full services capabilit
 Your views on the quality of services delivered by Global Associates are sought by the Managing Partner of the firm. We will take action promptly if you feel it is needed. We are experienced in serving complex organizations and we are happy to provide site references to support this claim. We know that clear communication is essential to our service provision. The client service role is judged by the effectiveness of our communication with clients and with our team.
 
 
-![](https://web-api.textin.com/ocr_image/external/dca403513f45a056.jpg)
+![](https://ik.imagekit.io/d36vkx7c33/gakandy/aashikhan-dahalan.jpg?updatedAt=1733502620389)
 
 Mr. M. D. M. Aashikkhan
 
@@ -62,7 +56,7 @@ Healthcare
 Telecommunications
 
 
-![](https://web-api.textin.com/ocr_image/external/3aaabce697ee7273.jpg)
+![](https://ik.imagekit.io/d36vkx7c33/gakandy/rizkhan-dahalan.jpg?updatedAt=1733502594762)
 
 Mr. Mohamed Rizkhan
 
@@ -153,9 +147,6 @@ Internal audit function within an entity is frequently become less effective if 
 
 As our internal audit is always governed by so called core principles i.e. integrity, professional competence and due care, objectivity and independence, appropriate communication, consideration of organizational strategies, objectives and risk aspects, adequate and timely deployment of resources, being insightful, proactive and future oriented, our present clientele is delighted to have us as the preferred internal audit partner in their organizational progress.
 
-
-![](https://web-api.textin.com/ocr_image/external/8daaa8fe069142ef.jpg)
-
 #### Performance Audit
 
 Like every human being, every organization faces resources limitations which is capable of even making your grand friend an arch enemy if not managed well.
@@ -179,9 +170,6 @@ Our approach, however, is flexible to accommodate managements’ diverse require
 Yet again, most of the businesses are exposed to various type of external and internal reporting requirements other than historical financial statements. This includes reports to regulators, reports for foreign investors, reports to be eligible for tax concessions, as an eligibility criterion for industrial awards, reports required under mergers and acquisition arrangements, etc.We perform these various reporting assignments within the framework of
 
 International Standards on Assurance Engagements which require us to maintain the same professional standards as is required for External Audits.
-
-
-![](https://web-api.textin.com/ocr_image/external/cb88ff8d1b442149.jpg)
 
 ### 2. MANAGEMENT REPORTING SERVICES
 
@@ -208,9 +196,6 @@ IFRS Compliance Testing and GAAP Analysis
 Generating Management Reports & Operational Analyses
 
 Outsourced Payroll Services
-
-
-![](https://web-api.textin.com/ocr_image/external/dbdc834c178afff2.jpg)
 
 ### 3. RISK MANAGEMENT & TECHNOLOGY ADVISORY
 
@@ -252,9 +237,6 @@ Basel III
 
 MiFID 2
 
-
-![](https://web-api.textin.com/ocr_image/external/787367e33bdd364e.jpg)
-
 ### 2. Internal Audit
 
 We offer internal audit to clients under two models, namely, fully outsourced model or co-sourced model. Those performing in-house controls assurance activity, be they internal audit or a management control function, are often struggling in the process of possessing all the technical and business expertise needed to effectively design or review business controls. This difficulty together with the pace of development and complexity in areas like technology and compliance make it very unlikely that an in-house team with finite resources will have the skills they need to generate adequate assurance in every case. We offer a pool of specialist technical resources from which a business can draw to meet their needs. As this support is only required when it is necessary, it gives an entity a cost-effective way of filling internal skills gaps.
@@ -290,9 +272,6 @@ a. when client has an expertise gap,
 b. when client has a shortfall in human resources or other physical resources, or
 
 c. when client sees the review as internally sensitive and prefers to use wholly independent resources.
-
-
-![](https://web-api.textin.com/ocr_image/external/493c396099981866.jpg)
 
 ### Features common to both approaches include:
 
@@ -337,9 +316,6 @@ Incident and response management
 Identity management
 
 Data encryption
-
-
-![](https://web-api.textin.com/ocr_image/external/a50cfe74f26c0cdb.jpg)
 
 Security awareness training and risk management
 
@@ -395,9 +371,6 @@ Storage architecture
 
 Data warehousing
 
-
-![](https://web-api.textin.com/ocr_image/external/e2e919ed251fb8b3.jpg)
-
 ##### Business Continuity Management
 
 Assistance with accreditation with IS022301
@@ -438,9 +411,6 @@ Risk evaluations; and
 
  Exit planning.
 
-
-![](https://web-api.textin.com/ocr_image/external/be5780980bbf5606.jpg)
-
 ### Business Continuity Management
 
 Regulators are placing increasing emphasis on this vital function in an organization particularly considering the current uncertainties in the region.
@@ -464,9 +434,6 @@ We have expertise in the following areas which will benefit our clients.
 Processes and controls evolve over a period of time in any organization and over a period become complex and, sometimes, cumbersome. We specialize in reviewing all business processes, identify high impact areas with potential for better performance, identify control weaknesses and redundant processes and recommend ways to improve efficiency. 
 
 We also assist in aligning revenue, products / services, and customers to maximize growth opportunities.
-
-
-![](https://web-api.textin.com/ocr_image/external/08143be245a2a4d1.jpg)
 
 ### 4. CORPORATE FINANCE ADVISORY SERVICES
 
@@ -502,9 +469,6 @@ Liaising with other advisors involved in the transaction
 
 The deal is finally wrapped up with commercial and accounting due diligence, leading to the completion of the sale. Throughout this process, our ‘total transaction support’ specialist teams are available to offer a fully integrated transaction service.
 
-
-![](https://web-api.textin.com/ocr_image/external/928df352e8de1a91.jpg)
-
 ### 2. Business Valuation
 
 Regardless of your objective to value your business, whether to sell or to raise funds, we are often asked to value individual shareholdings when they are planning to leave or invest further in the business.
@@ -526,9 +490,6 @@ This is the process by which you, the buyer, assess the viability of your target
 This is where our years of related industry knowledge provide genuine added value. When you are looking for pitfalls, it helps to know what to look for – what we certainly do.
 
 Our knowledge of different industries and unique benchmarking capabilities can help you identify the areas that require the most scrutiny.
-
-
-![](https://web-api.textin.com/ocr_image/external/394e7ffb448272ae.jpg)
 
 ### Financial due diligence
 
@@ -552,9 +513,6 @@ It is important to define a future business relationship from the outset. Whethe
 
 We regularly help in the formation of new ventures and have detailed knowledge of the issues and how best to avoid the pitfalls that would come across in the future through possible inadvertences
 
-
-![](https://web-api.textin.com/ocr_image/external/178dd1c09dc99ee3.jpg)
-
 We regularly help in the formation of new ventures and have detailed knowledge of the issues and how best to avoid the pitfalls that would come across in the future through possible inadvertences
 
 ### 5. Lead Advisory, Strategic & Exit Route Planning
@@ -574,9 +532,6 @@ Exit route planning and implementation of chosen strategy
 We have a continuously updated list of local and international business buyers.
 
 This, supplemented by our detailed knowledge across many sectors, enables us to introduce premium buyers to our clients in a confidential and professional manner and help our clients achieve a cost-effective buyer selection.
-
-
-![](https://web-api.textin.com/ocr_image/external/b05795e726bdd933.jpg)
 
 ### 6. Management Buy-Outs & Buy-Ins
 
@@ -611,9 +566,6 @@ A merger or an acquisition can only work as part of a well formulated business s
 We will help you to review your long term aspirations and decisions on whether a merger or an acquisition is indeed appropriate for your business. We will then use our understanding of your long-term objectives to develop suitable criteria for the assessment of potential targets.We always allocate a partner dedicated to your transaction. This ensures that you will always be fully
 
 informed and that proactive advice is available when you require it to create confidence in you that the deal does not falter in the critical stages.
-
-
-![](https://web-api.textin.com/ocr_image/external/21986f1c36cc08d1.jpg)
 
 ### 5. FORENSIC LITIGATION SERVICES
 
