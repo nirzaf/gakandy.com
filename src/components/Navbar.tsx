@@ -70,20 +70,20 @@ export default function Navbar() {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2">
-              <Home size={18} />
+            <Link to="/" className="text-gray-700 hover:text-[#033A5B] px-3 py-2 font-medium inline-flex items-center gap-2">
+              <Home size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>Home</span>
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2">
-              <Users size={18} />
+            <Link to="/about" className="text-gray-700 hover:text-[#033A5B] px-3 py-2 font-medium inline-flex items-center gap-2">
+              <Users size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>About Us</span>
             </Link>
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2">
-              <Briefcase size={18} />
+            <Link to="/services" className="text-gray-700 hover:text-[#033A5B] px-3 py-2 font-medium inline-flex items-center gap-2">
+              <Briefcase size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>Services</span>
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2">
-              <PhoneCall size={18} />
+            <Link to="/contact" className="text-gray-700 hover:text-[#033A5B] px-3 py-2 font-medium inline-flex items-center gap-2">
+              <PhoneCall size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>Contact</span>
             </Link>
           </div>
@@ -162,8 +162,8 @@ export default function Navbar() {
               closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
             }}
           >
-            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
-              <Home size={18} className="text-blue-600" />
+            <Link to="/" className="block text-gray-700 hover:text-[#033A5B] px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1 group" onClick={() => setIsOpen(false)}>
+              <Home size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>Home</span>
             </Link>
           </motion.div>
@@ -178,8 +178,8 @@ export default function Navbar() {
               closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
             }}
           >
-            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
-              <Users size={18} className="text-blue-600" />
+            <Link to="/about" className="block text-gray-700 hover:text-[#033A5B] px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1 group" onClick={() => setIsOpen(false)}>
+              <Users size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>About Us</span>
             </Link>
           </motion.div>
@@ -194,8 +194,8 @@ export default function Navbar() {
               closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
             }}
           >
-            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
-              <Briefcase size={18} className="text-blue-600" />
+            <Link to="/services" className="block text-gray-700 hover:text-[#033A5B] px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1 group" onClick={() => setIsOpen(false)}>
+              <Briefcase size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>Services</span>
             </Link>
           </motion.div>
@@ -210,8 +210,8 @@ export default function Navbar() {
               closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
             }}
           >
-            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1" onClick={() => setIsOpen(false)}>
-              <PhoneCall size={18} className="text-blue-600" />
+            <Link to="/contact" className="block text-gray-700 hover:text-[#033A5B] px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full transform transition-transform hover:translate-x-1 group" onClick={() => setIsOpen(false)}>
+              <PhoneCall size={18} className="text-[#22B0EB] group-hover:text-[#033A5B] transition-colors" />
               <span>Contact</span>
             </Link>
           </motion.div>
