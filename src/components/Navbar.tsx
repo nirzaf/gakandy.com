@@ -2,7 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const COMPANY_LOGO = "https://ik.imagekit.io/d36vkx7c33/gakandy/ga-primary-logo-transparent-bg.png?updatedAt=1733479652049";
+const COMPANY_LOGO = "https://ik.imagekit.io/d36vkx7c33/gakandy/ga-primary-logo-transparent-bg.png?updatedAt=1733486258478";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

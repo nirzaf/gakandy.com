@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import HeroSection from '../components/about/HeroSection';
 import OurStory from '../components/about/OurStory';
 import QuoteSection from '../components/about/QuoteSection';
 import WhyChooseUs from '../components/about/WhyChooseUs';
@@ -17,9 +16,6 @@ export default function AboutPage() {
       transition={{ duration: 0.5 }}
       className="pt-20 bg-gradient-to-b from-white to-gray-50"
     >
-      {/* Hero Section */}
-      <HeroSection />
-
       {/* Company Overview */}
       <CompanyOverview />
 

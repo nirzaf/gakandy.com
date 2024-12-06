@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
 
-const COMPANY_LOGO = "https://ik.imagekit.io/d36vkx7c33/gakandy/ga-primary-logo-transparent-bg.png?updatedAt=1733479652049";
+const COMPANY_LOGO = "https://ik.imagekit.io/d36vkx7c33/gakandy/ga-primary-logo-transparent-bg.png?updatedAt=1733486258478";
 
 const leaders = [
   {
