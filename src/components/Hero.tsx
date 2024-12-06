@@ -1,115 +1,113 @@
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <div id="home" className="relative min-h-screen">
-      {/* Hero Image with Overlay */}
-      <div className="absolute inset-0">
-        <motion.img
-          initial={{ scale: 1.1, opacity: 0.8 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          src="https://ik.imagekit.io/ri5cvrkrr/neve-accounting-01.jpg?updatedAt=1732207350705"
-          alt="Hero background"
-          className="w-full h-full object-cover brightness-75"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#033A5B]/95 via-[#084461]/90 to-[#0C4D75]/95"></div>
-        
-        {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#033A5B]/30 to-[#22B0EB]/20"></div>
-        
-        {/* Glass Panels */}
+    <div id="home" className="relative min-h-screen bg-[#020817]">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute w-[500px] h-[500px] -top-48 -right-24 rounded-full bg-gradient-to-br from-[#22B0EB]/20 to-transparent blur-3xl" />
+        <div className="absolute w-[400px] h-[400px] top-96 -left-24 rounded-full bg-gradient-to-tr from-[#033A5B]/30 to-transparent blur-3xl" />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 2 }}
           className="absolute inset-0"
         >
-          <div className="absolute top-20 -left-32 w-96 h-96 bg-[#033A5B]/10 backdrop-blur-3xl rounded-full"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#22B0EB]/5 rounded-full filter blur-3xl" />
+          <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-[#033A5B]/10 rounded-full filter blur-3xl" />
         </motion.div>
       </div>
-      
-      {/* Content */}
-      <div className="relative z-10 pt-20">
-        <div className="max-w-7xl mx-auto">
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:mt-16 lg:px-8 xl:mt-20">
-            <div className="text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="backdrop-blur-sm bg-[#033A5B]/[0.08] py-12 px-6 rounded-2xl shadow-2xl border border-[#22B0EB]/15"
-              >
-                {/* Tagline */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="text-xl text-[#22B0EB] font-semibold tracking-wide mb-6"
-                >
-                  Chartered Accountants & Business Advisors
-                </motion.p>
 
-                {/* Main Title */}
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl mb-6"
-                >
-                  <span className="block text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] bg-clip-text">
-                    Global Associates
-                  </span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#22B0EB] to-[#28A2D4] mt-2">
-                    Excellence in Service
-                  </span>
-                </motion.h1>
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0 bg-[url('/grid-pattern.png')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
 
-                {/* Description */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1 }}
-                  className="mt-3 text-lg text-white sm:mt-5 sm:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
-                >
-                  A full-service accounting firm delivering transparent, cost-effective solutions with a commitment to exceeding your expectations in financial and legal compliance.
-                </motion.p>
-
-                {/* Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.2 }}
-                  className="mt-8 sm:mt-10 flex justify-center gap-4"
-                >
-                  {/* Contact Button */}
-                  <Link
-                    to="/contact"
-                    className="group relative px-8 py-4 bg-gradient-to-r from-[#033A5B] to-[#0C4D75] rounded-xl text-white font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25"
-                  >
-                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#033A5B] to-[#0C4D75] transition-all duration-300 group-hover:opacity-90"></div>
-                    <div className="relative flex items-center">
-                      Contact Us
-                      <ChevronRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                    </div>
-                  </Link>
-
-                  {/* Services Button */}
-                  <a
-                    href="#services"
-                    className="group relative px-8 py-4 bg-[#22B0EB]/15 backdrop-blur-sm rounded-xl text-white font-semibold overflow-hidden transition-all duration-300 hover:bg-[#22B0EB]/25"
-                  >
-                    <div className="relative flex items-center">
-                      Our Services
-                      <ChevronRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                    </div>
-                  </a>
-                </motion.div>
-              </motion.div>
+      {/* Content Container */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-32 sm:pt-32 lg:px-8 lg:pt-32">
+        <div className="mx-auto max-w-2xl lg:max-w-4xl">
+          {/* Top Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 flex justify-center"
+          >
+            <div className="rounded-full px-3 py-1 text-sm leading-6 text-[#22B0EB] ring-1 ring-[#22B0EB]/20 hover:ring-[#22B0EB]/30 backdrop-blur-sm">
+              Trusted by Leading Businesses{' '}
+              <a href="#clients" className="font-semibold text-[#22B0EB] inline-flex items-center">
+                <span>View Our Clients</span>
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </a>
             </div>
-          </main>
+          </motion.div>
+
+          {/* Main Content */}
+          <div className="text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            >
+              <span className="inline-block mb-4">Global Associates</span>
+              <span className="block bg-gradient-to-r from-[#22B0EB] to-[#28A2D4] bg-clip-text text-transparent">
+                Chartered Excellence
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-6 text-lg leading-8 text-gray-300"
+            >
+              Empowering businesses through expert financial guidance, innovative solutions,
+              and unwavering commitment to excellence in accounting services.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-10 flex items-center justify-center gap-x-6"
+            >
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center gap-x-2 rounded-xl bg-gradient-to-r from-[#033A5B] to-[#0C4D75] px-8 py-4 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#22B0EB]/25 hover:-translate-y-0.5"
+              >
+                Schedule Consultation
+                <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+              <a
+                href="#services"
+                className="group relative inline-flex items-center gap-x-2 rounded-xl bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
+              >
+                Explore Services
+                <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </motion.div>
+
+            {/* Stats Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-16 grid grid-cols-1 gap-y-8 sm:grid-cols-3 sm:gap-x-12"
+            >
+              {[
+                { value: '20+', label: 'Years Experience' },
+                { value: '500+', label: 'Satisfied Clients' },
+                { value: '100%', label: 'Success Rate' },
+              ].map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center">
+                  <dt className="text-base leading-7 text-gray-300">{stat.label}</dt>
+                  <dd className="text-3xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
