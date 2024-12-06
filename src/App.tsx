@@ -6,7 +6,6 @@ import Services from './components/Services';
 import About from './components/About';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
-import PartnersPage from './pages/PartnersPage';
 import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
 import ThankYouPage from './pages/ThankYouPage';
@@ -35,7 +34,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/partners" element={<PartnersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/thanks" element={<ThankYouPage />} />
