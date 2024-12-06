@@ -12,7 +12,6 @@ import ServicesPage from './pages/ServicesPage';
 import ThankYouPage from './pages/ThankYouPage';
 import MissionVision from './components/MissionVision';
 import Performance from './components/Performance';
-import PrimeGlobal from './components/PrimeGlobal';
 import { Toaster } from 'react-hot-toast';
 
 function HomePage() {
@@ -20,7 +19,6 @@ function HomePage() {
     <div className="bg-site-bg">
       <Hero />
       <WhyChooseUs />
-      <PrimeGlobal />
       <Performance />
       <Services />
       <MissionVision />

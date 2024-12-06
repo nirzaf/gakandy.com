@@ -78,7 +78,7 @@ export default function MissionVision() {
                 <h3 className="text-2xl font-bold text-gray-900 ml-4">Our Vision</h3>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Shaping the future of financial services in Qatar by setting new standards of excellence and innovation in auditing and consultancy.
+                Shaping the future of financial services in Sri Lanka by setting new standards of excellence and innovation in auditing and consultancy.
               </p>
               <ul className="space-y-3">
                 {['Industry Leadership', 'Continuous Innovation', 'Regional Excellence'].map((item) => (

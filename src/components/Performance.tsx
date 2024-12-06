@@ -42,14 +42,13 @@ export default function Performance() {
               className="prose prose-lg prose-invert"
             >
               <p className="text-gray-300 leading-relaxed text-lg">
-                Global Associates is one of the top global alliances of expert firms providing 
-                high-quality professional services and advice. With a rapidly growing global presence made up of accountancy 
-                and law firms worldwide, our cross-border service offering facilitates the international operations of 
-                businesses of all sizes and ambition, whatever their needs.
+                Global Associates is a leading professional services firm based in Kandy, Sri Lanka, providing 
+                high-quality accounting, auditing, and advisory services. With a strong local presence and international expertise, 
+                we facilitate the operations of businesses of all sizes, whatever their needs.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Supporting firm growth and development, we are the global alliance of choice offering clients fast and 
-                effective access to quality-assured accounting and legal professionals across the globe.
+                Supporting business growth and development, we are the trusted partner of choice offering clients fast and 
+                effective access to quality-assured accounting and advisory professionals.
               </p>
             </motion.div>
 
