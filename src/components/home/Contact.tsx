@@ -94,25 +94,24 @@ export default function Contact() {
       icon: Phone,
       title: 'Phone Numbers',
       details: [
-        '+9481-2225 488',
-        '+94777654509',
-        '+94764760225'
+        '+94 81 222 5488',
+        '+94 777 654 509',
+        '+94 764 760 225'
       ]
     },
     {
       icon: Mail,
       title: 'Email',
       details: [
-        'info@gakandy.com',
-        'aashikkhan@gakandy.com'
+        'info@gakandy.lk',
+        'aashikkhan@gakandy.lk'
       ]
     },
     {
       icon: MapPin,
       title: 'Address',
       details: [
-        'No 291, D.S Senanayake Veediya,',
-        'Kandy, Sri Lanka'
+        'No. 291, D.S. Senanayake Veediya, Kandy, Sri Lanka.'
       ]
     }
   ];

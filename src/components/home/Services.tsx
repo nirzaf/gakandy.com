@@ -1,29 +1,49 @@
 import { motion } from 'framer-motion';
-import { FileText, BarChart, BookOpen, Users } from 'lucide-react';
+import { Calculator, Search, BookOpen, Users, FileText, ShieldCheck, LineChart, Settings } from 'lucide-react';
 import Section from '../shared/Section';
 import Card from '../shared/Card';
 import { staggerContainer } from '../../utils/animations';
 
 const services = [
   {
-    icon: FileText,
-    title: 'Accounting & Auditing',
-    description: 'Comprehensive accounting services including external/internal audits and accounting system setup.',
+    icon: Search,
+    title: 'Audit Services',
+    description: 'Comprehensive audit services including statutory, tax, internal, and forensic audits to ensure compliance and detect irregularities.',
   },
   {
-    icon: BarChart,
-    title: 'Business Advisory',
-    description: 'Strategic business consulting and advisory services to help your organization grow and succeed.',
+    icon: ShieldCheck,
+    title: 'Compliance Services',
+    description: 'Complete regulatory compliance, international standards adherence, tax management, and payroll processing services.',
+  },
+  {
+    icon: LineChart,
+    title: 'Advisory Services',
+    description: 'Expert financial accounting, virtual CFO services, business diagnostics, and process optimization solutions.',
+  },
+  {
+    icon: Calculator,
+    title: 'Accounting Services',
+    description: 'Professional accounting and bookkeeping services with expertise in major accounting software systems.',
+  },
+  {
+    icon: FileText,
+    title: 'Business Registration',
+    description: 'Complete assistance with business registration and secretarial services to help establish and maintain your business.',
+  },
+  {
+    icon: Settings,
+    title: 'System Implementation',
+    description: 'Accounting system setup, internal control establishment, and process flow chart development.',
   },
   {
     icon: BookOpen,
     title: 'Training Programs',
-    description: 'Specialized training programs including Finance for Non-Finance Executives.',
+    description: 'Specialized training programs and workshops for business professionals and organizations.',
   },
   {
     icon: Users,
-    title: 'Consulting Services',
-    description: 'Professional consulting services for internal control, procedure manuals, and process optimization.',
+    title: 'Business Advisory',
+    description: 'Strategic business consulting and advisory services to help your organization grow and succeed.',
   },
 ];
 
@@ -31,8 +51,8 @@ export default function Services() {
   return (
     <Section
       title="Our Services"
-      subtitle="We provide a wide range of professional services to help businesses thrive in today's competitive environment."
-      background="white"
+      subtitle="We provide a comprehensive range of professional services to help businesses thrive in today's competitive environment."
+      background="gray"
     >
       <motion.div
         variants={staggerContainer}
@@ -45,7 +65,7 @@ export default function Services() {
           <Card
             key={index}
             variant="elevated"
-            className="p-6"
+            className="p-6 h-full"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
