@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import OurStory from '../components/about/OurStory';
 import QuoteSection from '../components/about/QuoteSection';
-import WhyChooseUs from '../components/about/WhyChooseUs';
 import Benefits from '../components/about/Benefits';
 import CoreValues from '../components/about/CoreValues';
 import Leadership from '../components/about/Leadership';
@@ -282,11 +281,6 @@ export default function AboutPage() {
       {/* Leadership Team */}
       <section className="bg-white py-8">
         <Leadership />
-      </section>
-
-      {/* Why Choose Us with brand accent */}
-      <section className="bg-white py-8">
-        <WhyChooseUs />
       </section>
 
       {/* Benefits with subtle gradient */}
