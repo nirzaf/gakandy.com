@@ -22,17 +22,7 @@ export default function HomePage() {
       <Vision />
 
       {/* Why Choose Us Section */}
-      <motion.section
-        variants={staggerContainer}
-        className="bg-gradient-to-br from-white to-gray-50 py-16 relative overflow-hidden"
-      >
-        {/* Background Decorative Elements */}
-        <div className="absolute -left-64 -top-64 w-[500px] h-[500px] rounded-full bg-[#033A5B]/5 blur-3xl" />
-        <div className="absolute -right-64 -bottom-64 w-[500px] h-[500px] rounded-full bg-[#22B0EB]/5 blur-3xl" />
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#033A5B] via-[#22B0EB] to-[#126190]" />
-        
-        <WhyChooseUs />
-      </motion.section>
+      <WhyChooseUs />
 
       {/* Services Section */}
       <Services />
