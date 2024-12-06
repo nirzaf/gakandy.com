@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import PartnersPage from './pages/PartnersPage';
 import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
+import ThankYouPage from './pages/ThankYouPage';
 import MissionVision from './components/MissionVision';
 import Performance from './components/Performance';
 import PrimeGlobal from './components/PrimeGlobal';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/thanks" element={<ThankYouPage />} />
         </Routes>
         <Footer />
         <Toaster position="top-right" />
