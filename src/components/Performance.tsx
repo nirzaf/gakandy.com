@@ -42,7 +42,7 @@ export default function Performance() {
               className="prose prose-lg prose-invert"
             >
               <p className="text-gray-300 leading-relaxed text-lg">
-                Salem Taleb Efaifa Auding and Consultancy is one of the top global alliances of expert firms providing 
+                Global Associates is one of the top global alliances of expert firms providing 
                 high-quality professional services and advice. With a rapidly growing global presence made up of accountancy 
                 and law firms worldwide, our cross-border service offering facilitates the international operations of 
                 businesses of all sizes and ambition, whatever their needs.

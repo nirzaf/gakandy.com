@@ -1,0 +1,1 @@
+Resume the task from the last completed point, skipping already processed steps, and adjust resources or batch sizes to prevent further interruptions.

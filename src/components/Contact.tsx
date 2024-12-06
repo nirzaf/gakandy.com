@@ -83,10 +83,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold text-[#00204A] mb-1">Phone</h3>
                     <a 
-                      href="tel:+97450008194" 
+                      href="tel:+94 81 123 4567" 
                       className="text-lg text-[#00204A]/80 hover:text-[#00204A] hover:underline"
                     >
-                      +974 5000 8194
+                      +94 81 123 4567
                     </a>
                   </div>
                 </div>
@@ -101,10 +101,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold text-[#00204A] mb-1">Email</h3>
                     <a 
-                      href="mailto:info@steaudit.com" 
+                      href="mailto:info@gakandy.com" 
                       className="text-lg text-[#00204A]/80 hover:text-[#00204A] hover:underline"
                     >
-                      info@steaudit.com
+                      info@gakandy.com
                     </a>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function Contact() {
               <div className="bg-white rounded-xl shadow-lg p-4 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14432.914085278253!2d51.415211!3d25.262897!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45d9609642333b%3A0xe1b2139c78662585!2sSalem%20Taleb%20Efaifa%20Auditing%20and%20consultancy!5e0!3m2!1sen!2sus!4v1732233471451!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5899527055087!2d80.63447661477622!3d7.289661994743505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368cf2b1c1c1d%3A0x4c4c8c8c8c8c8c8c!2sGlobal%20Associates%20Kandy!5e0!3m2!1sen!2slk!4v1620000000000!5m2!1sen!2slk"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -228,12 +228,12 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-semibold text-[#00204A] mb-1">Address</h3>
                     <p className="text-[#00204A]/70 leading-relaxed">
-                      Office No. 4, Building No. 3,<br />
-                      Street No. 902, Zone No. 55,<br />
-                      Muaither Area, Qatar
+                      No 291,<br />
+                      D.S Senanayake Veediya,<br />
+                      Kandy, Sri Lanka
                     </p>
                     <a 
-                      href="https://maps.app.goo.gl/zVLPxbrQbEnaJx4R7"
+                      href="https://maps.app.goo.gl/example-link"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"

@@ -13,7 +13,7 @@ export default function Navbar() {
             <Link to="/">
               <img 
                 src="https://ik.imagekit.io/ri5cvrkrr/LOGO-.png?updatedAt=1732207359661" 
-                alt="STE Logo" 
+                alt="Global Associates Logo" 
                 className="h-12 w-auto"
               />
             </Link>

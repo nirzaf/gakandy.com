@@ -3,26 +3,25 @@ import PartnersSection from '../components/partners/PartnersSection';
 
 const partners = [
   {
-    name: 'Salem Taleb Efaifa (MBA)',
-    title: 'Managing Partner',
-    image: 'https://ik.imagekit.io/ri5cvrkrr/2022-12-10_21-02-36.png?updatedAt=1732207356209',
+    name: 'Mr. M. Aashikkhan',
+    title: 'Technical & Managing Partner',
+    image: '/images/partners/aashikkhan.jpg',
     description: [
-      'Salem is the Managing Partner and is responsible for the Assurance and Advisory services, Tax and Business Community Training offered by the firm. He is the Managing partner for the firm as well and our team will be advised overall by him.',
-      'He is based in Qatar has been involved in audit activities in Qatar. His ability to quickly comprehend core issues in general and his experience in other business ventures in the Middle East will enable the team to develop and deliver high quality and effective assurance solutions.',
-      'During his career, Salem has gained extensive experience in audit, accounting, taxation, and related services. His client portfolio covers a wide variety of industries including oil and gas, telecommunication, utilities, banks, petrochemical and other downstream sector businesses, construction and manufacturing. He has advised a number of clients on assurance and advisory assignments in Qatar.',
-      'He specializes in providing professional consultancy services such as Feasibility Study, Business Planning, and Financial & Management Consultancy and is an Assurance Services expert'
+      'Mr. Aashikkhan is the Technical & Managing Partner at Global Associates Kandy, leading our professional services and strategic initiatives.',
+      'With extensive qualifications including FCA, FCCA, ACMA, CGMA, ASCMA, ACFE, MAAT, and AIPA, he brings comprehensive expertise in accounting, auditing, and financial management.',
+      'His experience spans across various industries, providing expert guidance in financial reporting, tax planning, business advisory, and strategic consulting.',
+      'Under his leadership, Global Associates Kandy has established itself as a leading professional services firm in Sri Lanka, serving both local and international clients.'
     ]
   },
   {
-    name: 'Mr. M. Dahalan FCCA, ACA, ACFE, APA',
-    title: 'Partner Audit and Assurance',
-    image: 'https://ik.imagekit.io/ri5cvrkrr/2022-12-10_21-17-52.png?updatedAt=1732207356185',
+    name: 'Mr. Mohamed Rizkhan',
+    title: 'Executive Manager',
+    image: '/images/partners/rizkhan.jpg',
     description: [
-      'Dahalan is the Partner Audit and Assurance, and is responsible for the Assurance and Advisory services, Tax and Business Community Training offered by the firm. He is the Technical Partner for the firm as well and our team will be advised on technical matters by M.DahaIan.',
-      'He is based in Qatar and has been involved in audit and training activities in Qatar, Srilanka, and UAE for over 18 years. His ability to quickly comprehend core issues in general and his experience in other business ventures in the Asia and Middle East will enable the team to develop and deliver high quality and effective assurance solutions.',
-      'During his career, M.DahaIan has gained extensive experience in audit, accounting, taxation, business community training, and related services. His client portfolio covers a wide variety of industries including oil and gas, telecommunication, utilities, banks, petrochemical and other downstream sector businesses, construction and manufacturing. He has advised a number of clients on assurance and advisory assignments in Qatar, Srilanka and UAE.',
-      'Dahalan is a fraud examiner and Investigation expert involved in many fraud-related assignments and was able to produce reports with solid findings with evidence. He is a Certified Fraud Examiner from the United States.',
-      'M.DahaIan carries a vast amount of professional experience, exceeding 18 years in Assurance, Advisory, Internal Audit, Accounting and Management & Financial Consulting Services with major Audit firms including Ernst & Young (EY) and PricewaterhouseCoopers (PWC).'
+      'Mr. Mohamed Rizkhan serves as the Executive Manager at Global Associates Kandy, overseeing operational excellence and client service delivery.',
+      'Holding an MSc, ACCA, OCP, and DNIIT, he brings a unique combination of technical expertise and management skills to the firm.',
+      'His focus areas include system implementation, digital transformation, and process optimization, helping clients leverage technology for business growth.',
+      'With his extensive experience in both technical and managerial roles, he ensures that Global Associates maintains the highest standards of service quality and client satisfaction.'
     ]
   }
 ];
