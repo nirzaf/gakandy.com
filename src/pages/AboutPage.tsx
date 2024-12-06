@@ -65,7 +65,7 @@ export default function AboutPage() {
       className="pt-20 bg-gradient-to-b from-white to-gray-50"
     >
       {/* Company Overview Section */}
-      <section className="relative bg-gradient-to-b from-white to-gray-50 py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-white to-gray-50 py-12 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-12 overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#033A5B]/5 to-[#22B0EB]/5" />
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#033A5B] via-[#22B0EB] to-[#126190]" />
@@ -211,7 +211,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-br from-white to-gray-50">
+      <section className="relative py-12 overflow-hidden bg-gradient-to-br from-white to-gray-50">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#033A5B] via-[#22B0EB] to-[#126190]" />
         <div className="absolute -left-64 -top-64 w-[500px] h-[500px] rounded-full bg-[#033A5B]/5 blur-3xl" />
@@ -279,22 +279,22 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Team */}
-      <section className="bg-white py-8">
+      <section className="bg-white py-6">
         <Leadership />
       </section>
 
       {/* Benefits with subtle gradient */}
-      <section className="bg-gradient-to-r from-pictonBlue-50 to-pictonBlue-100 py-8">
+      <section className="bg-gradient-to-r from-pictonBlue-50 to-pictonBlue-100 py-6">
         <Benefits />
       </section>
 
       {/* Quote Section with deep brand color */}
-      <section className="bg-indigoDye-600 py-8">
+      <section className="bg-indigoDye-600 py-6">
         <QuoteSection />
       </section>
 
       {/* Core Values with brand colors */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-24">
+      <section className="bg-gradient-to-b from-white to-gray-50 py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
