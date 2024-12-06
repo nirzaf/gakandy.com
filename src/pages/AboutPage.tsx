@@ -6,7 +6,7 @@ import Benefits from '../components/about/Benefits';
 import CoreValues from '../components/about/CoreValues';
 import Leadership from '../components/about/Leadership';
 import CompanyOverview from '../components/about/CompanyOverview';
-import { Briefcase, Target, ChevronDown, ChevronUp, GraduationCap, Award as AwardIcon, Briefcase as BriefcaseIcon } from 'lucide-react';
+import { Briefcase, Target, ChevronDown, ChevronUp, GraduationCap, Award as AwardIcon, Briefcase as BriefcaseIcon, Building2 } from 'lucide-react';
 import { Shield, Award, Users, Lightbulb, Users2, Scale } from 'lucide-react';
 
 const features = [
@@ -59,9 +59,10 @@ const stats = [
 
 const teamMembers = [
   {
-    name: "Aashikhan Dahalan",
-    position: "Partner at Global Associates Chartered Accountants",
+    name: "M. D. M. Aashikkhan",
+    position: "Managing Partner",
     image: "https://ik.imagekit.io/d36vkx7c33/gakandy/aashikhan-dahalan.jpg",
+    bio: "Mohammed Aashikkhan is the Managing Partner and is responsible for the Assurance and Advisory services, Tax and Business Community Training offered by the firm. He is the Technical & Managing Partner for the firm as well and our team will be advised on technical matters by Mohammed Aashikkhan.",
     qualifications: [
       "Chartered Accountant",
       "Member of the Institute of Chartered Accountants of Sri Lanka"
@@ -71,17 +72,41 @@ const teamMembers = [
       "Assurance Services",
       "Risk Management",
       "Quality Control",
-      "Corporate Governance"
+      "Corporate Governance",
+      "Business Community Training",
+      "Taxation",
+      "Financial Consulting"
     ],
     experience: [
-      "Extensive experience in audit and assurance",
-      "Leadership in complex audit engagements"
+      "Over 16 years in Assurance, Advisory, Internal Audit, and Financial Consulting",
+      "Former Senior Manager at Ernst & Young Qatar (7 years)",
+      "Experience with major firms including Ernst & Young (EY) and PricewaterhouseCoopers (PWC)",
+      "Instrumental in establishing NAD Qatar and Abacus Dubai",
+      "Leading training provider for various international qualifications"
+    ],
+    industries: [
+      "Banking & Finance",
+      "Airlines & Aviation",
+      "Energy & Utilities Sector",
+      "Hospitality",
+      "Automobile",
+      "Trading & Manufacturing",
+      "Retail Trading",
+      "Healthcare",
+      "Telecommunications"
+    ],
+    specializations: [
+      "Feasibility Study",
+      "Business Planning",
+      "Financial & Management Consultancy",
+      "Assurance Services"
     ]
   },
   {
-    name: "Rizkhan Dahalan",
-    position: "Partner at Global Associates Chartered Accountants",
+    name: "Mohamed Rizkhan",
+    position: "Executive Manager",
     image: "https://ik.imagekit.io/d36vkx7c33/gakandy/rizkhan-dahalan.jpg",
+    bio: "Mohammed Rizkhan is the Executive Manager of the firm with more than 15 years experience in Finance, Management Accounting, Costing and ERP applications. He possesses vast experience in advisory services, financial analysis, financial management, risk management, statutory audit services and internal audit services.",
     qualifications: [
       "Chartered Accountant",
       "Member of the Institute of Chartered Accountants of Sri Lanka"
@@ -91,11 +116,23 @@ const teamMembers = [
       "Business Advisory",
       "Strategic Planning",
       "Mergers & Acquisitions",
-      "Financial Management"
+      "Financial Management",
+      "Management Accounting",
+      "Costing",
+      "ERP Applications"
     ],
     experience: [
-      "Expert in corporate finance advisory",
-      "Leadership in business valuations"
+      "Over 15 years in Finance and Management Accounting",
+      "More than 10 years of lecturing and training experience",
+      "Specialized in implementing and training ERP business applications (ORACLE, SAP)",
+      "Experience in training students for CIMA, ACCA, ISACL examinations"
+    ],
+    specializations: [
+      "ERP Implementation",
+      "Financial Analysis",
+      "Risk Management",
+      "Statutory Audit Services",
+      "Internal Audit Services"
     ]
   }
 ];
@@ -106,27 +143,35 @@ const TeamMemberCard = ({ member }: { member: typeof teamMembers[0] }) => {
   return (
     <motion.div
       layout
-      className="bg-white rounded-xl shadow-lg overflow-hidden max-w-2xl mx-auto"
+      className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col"
     >
       <div className="flex items-start">
         <motion.div 
           layout="position"
-          className="relative w-48 h-48 flex-shrink-0 rounded-l-xl overflow-hidden"
+          className="relative w-48 h-48 flex-shrink-0 rounded-l-xl overflow-hidden group cursor-pointer"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
-          <img
+          <motion.div
+            className="absolute inset-0 bg-[#22B0EB] opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+          />
+          <motion.img
             src={member.image}
             alt={member.name}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           />
         </motion.div>
 
         <div className="flex-1 p-6">
           <h3 className="text-2xl font-bold text-[#033A5B] mb-1">{member.name}</h3>
           <p className="text-gray-600 mb-4">{member.position}</p>
+          <p className="text-gray-600 mb-4 line-clamp-2">{member.bio}</p>
           
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-between w-full text-[#033A5B] font-medium"
+            className="flex items-center justify-between w-full text-[#033A5B] font-medium hover:text-[#22B0EB] transition-colors duration-300"
           >
             <span>View {isExpanded ? 'Less' : 'More'}</span>
             {isExpanded ? (
@@ -145,43 +190,77 @@ const TeamMemberCard = ({ member }: { member: typeof teamMembers[0] }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden px-6 pb-6"
+            className="overflow-hidden px-6 pb-6 flex-1 md:flex md:flex-col"
           >
-            <div className="pt-4 space-y-6">
-              <div>
-                <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
-                  <GraduationCap className="w-5 h-5" />
-                  <h4>Qualifications</h4>
-                </div>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  {member.qualifications.map((qual, index) => (
-                    <li key={index}>{qual}</li>
-                  ))}
-                </ul>
-              </div>
+            <div className="pt-4 space-y-6 h-full">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                      <GraduationCap className="w-5 h-5" />
+                      <h4>Qualifications</h4>
+                    </div>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                      {member.qualifications.map((qual, index) => (
+                        <li key={index}>{qual}</li>
+                      ))}
+                    </ul>
+                  </div>
 
-              <div>
-                <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
-                  <AwardIcon className="w-5 h-5" />
-                  <h4>Areas of Expertise</h4>
-                </div>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  {member.expertise.map((exp, index) => (
-                    <li key={index}>{exp}</li>
-                  ))}
-                </ul>
-              </div>
+                  <div>
+                    <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                      <AwardIcon className="w-5 h-5" />
+                      <h4>Areas of Expertise</h4>
+                    </div>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                      {member.expertise.map((exp, index) => (
+                        <li key={index}>{exp}</li>
+                      ))}
+                    </ul>
+                  </div>
 
-              <div>
-                <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
-                  <BriefcaseIcon className="w-5 h-5" />
-                  <h4>Professional Experience</h4>
+                  {member.industries && (
+                    <div>
+                      <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                        <Building2 className="w-5 h-5" />
+                        <h4>Industries of Expertise</h4>
+                      </div>
+                      <ul className="list-disc list-inside text-gray-600 space-y-1">
+                        {member.industries.map((industry, index) => (
+                          <li key={index}>{industry}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  {member.experience.map((exp, index) => (
-                    <li key={index}>{exp}</li>
-                  ))}
-                </ul>
+
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                      <BriefcaseIcon className="w-5 h-5" />
+                      <h4>Professional Experience</h4>
+                    </div>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                      {member.experience.map((exp, index) => (
+                        <li key={index}>{exp}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {member.specializations && (
+                    <div>
+                      <div className="flex items-center gap-2 text-[#033A5B] font-semibold mb-2">
+                        <Target className="w-5 h-5" />
+                        <h4>Specializations</h4>
+                      </div>
+                      <ul className="list-disc list-inside text-gray-600 space-y-1">
+                        {member.specializations.map((spec, index) => (
+                          <li key={index}>{spec}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </motion.div>
@@ -433,7 +512,9 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {teamMembers.map((member, index) => (
-              <TeamMemberCard key={member.name} member={member} />
+              <div key={member.name} className="md:flex md:flex-col">
+                <TeamMemberCard member={member} />
+              </div>
             ))}
           </div>
         </div>
