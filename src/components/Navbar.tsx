@@ -103,19 +103,19 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2" onClick={() => setIsOpen(false)}>
+            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
               <Home size={18} />
               <span>Home</span>
             </Link>
-            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2" onClick={() => setIsOpen(false)}>
+            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
               <Users size={18} />
               <span>About Us</span>
             </Link>
-            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2" onClick={() => setIsOpen(false)}>
+            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
               <Briefcase size={18} />
               <span>Services</span>
             </Link>
-            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium inline-flex items-center gap-2" onClick={() => setIsOpen(false)}>
+            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md font-medium flex items-center gap-2 w-full" onClick={() => setIsOpen(false)}>
               <PhoneCall size={18} />
               <span>Contact</span>
             </Link>
