@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div id="home" className="relative min-h-[75vh] overflow-hidden">
+    <div id="home" className="relative min-h-[75vh] overflow-hidden bg-black/10">
       {/* Background Image with Blur Effect */}
       <div className="absolute inset-0">
         <motion.img
@@ -19,11 +19,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       </div>
 
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[url('/grid-pattern.png')] bg-center opacity-5" />
-
       {/* Subtle Gradient Overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-black/20">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#033A5B]/5 via-transparent to-[#22B0EB]/5" />
         <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/40 to-transparent" />
       </div>
