@@ -2,6 +2,8 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const COMPANY_LOGO = "https://ik.imagekit.io/d36vkx7c33/gakandy/ga-primary-logo-transparent-bg.png?updatedAt=1733479652049";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,9 +14,9 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/">
               <img 
-                src="https://ik.imagekit.io/ri5cvrkrr/LOGO-.png?updatedAt=1732207359661" 
+                src={COMPANY_LOGO}
                 alt="Global Associates Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto -my-2"
               />
             </Link>
           </div>
