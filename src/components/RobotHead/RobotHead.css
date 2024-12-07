@@ -1,6 +1,6 @@
 .robot-head {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   margin: 0 auto;
   background: radial-gradient(
     circle at 30% 30%,
@@ -12,10 +12,10 @@
   transform-style: preserve-3d;
   transform: rotateX(10deg);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.2),
-    0 10px 20px rgba(0, 0, 0, 0.1),
-    inset -5px -5px 20px rgba(0, 0, 0, 0.1),
-    inset 5px 5px 20px rgba(255, 255, 255, 0.8);
+    0 15px 30px rgba(3, 58, 91, 0.2),
+    0 8px 16px rgba(3, 58, 91, 0.1),
+    inset -4px -4px 15px rgba(12, 77, 117, 0.1),
+    inset 4px 4px 15px rgba(255, 255, 255, 0.8);
   overflow: hidden;
   backdrop-filter: blur(5px);
 }
@@ -30,9 +30,9 @@
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.4) 40%,
-    rgba(255, 255, 255, 0.8) 45%,
-    rgba(255, 255, 255, 0.4) 50%,
+    rgba(34, 176, 235, 0.1) 40%,
+    rgba(34, 176, 235, 0.2) 45%,
+    rgba(34, 176, 235, 0.1) 50%,
     transparent 60%
   );
   transform: rotate(45deg);
@@ -50,7 +50,7 @@
   border-radius: 50%;
   background: radial-gradient(
     circle at center,
-    rgba(255, 255, 255, 0.1),
+    rgba(34, 176, 235, 0.1),
     transparent 70%
   );
   z-index: -1;
@@ -68,32 +68,32 @@
 }
 
 .eye-socket {
-  width: 63px;
-  height: 63px;
-  background: radial-gradient(circle at 30% 30%, #000000, #1a1a1a);
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, #033A5B, #0C4D75);
   border-radius: 50%;
   position: absolute;
-  top: 25%;
+  top: 22%;
   overflow: hidden;
   transform-style: preserve-3d;
   transform: translateZ(10px);
   box-shadow: 
-    0 0 20px rgba(0, 0, 0, 0.4),
-    inset 0 0 20px rgba(0, 0, 0, 0.9),
-    0 0 10px rgba(0, 0, 0, 0.3);
+    0 0 16px rgba(3, 58, 91, 0.4),
+    inset 0 0 16px rgba(8, 68, 97, 0.9),
+    0 0 8px rgba(12, 77, 117, 0.3);
 }
 
 .eye-socket.left {
-  left: 15%;
+  left: 12%;
 }
 
 .eye-socket.right {
-  right: 15%;
+  right: 12%;
 }
 
 .eye {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   background: radial-gradient(circle at 30% 30%, #fff, #f0f0f0);
   border-radius: 50%;
   position: absolute;
@@ -102,28 +102,45 @@
   transform: translate(-50%, -50%);
   transition: all 0.05s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-shadow: 
-    0 0 10px rgba(0, 0, 0, 0.3),
-    inset 0 0 5px rgba(0, 0, 0, 0.2);
+    0 0 8px rgba(0, 0, 0, 0.3),
+    inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform-origin: center center;
+}
+
+.eye.blink {
+  animation: blink 150ms ease-in-out forwards;
+}
+
+@keyframes blink {
+  0% {
+    transform: translate(-50%, -50%) scaleY(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scaleY(0.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleY(1);
+  }
 }
 
 .pupil {
-  width: 18px;
-  height: 18px;
-  background: radial-gradient(circle at 40% 40%, #00f0ff, #0099ff);
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle at 40% 40%, #22B0EB, #28A2D4);
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 
-    0 0 10px #00f0ff,
-    0 0 20px #00f0ff,
-    0 0 30px rgba(0, 240, 255, 0.5);
+    0 0 8px #22B0EB,
+    0 0 16px #28A2D4,
+    0 0 24px rgba(34, 176, 235, 0.5);
 }
 
 .glow {
-  width: 9px;
-  height: 9px;
+  width: 7px;
+  height: 7px;
   background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%);
   border-radius: 50%;
   position: absolute;
