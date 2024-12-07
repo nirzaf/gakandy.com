@@ -3,6 +3,7 @@ import { HiPhone, HiMail, HiLocationMarker, HiExternalLink } from 'react-icons/h
 import { supabase } from '../lib/supabase';
 import { ContactFormData } from '../types/contact';
 import { toast } from 'react-hot-toast';
+import { GoogleMap } from './GoogleMap';
 
 export default function Contact() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -181,23 +182,12 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column - Map, Business Hours, and Address */}
+          {/* Right Column - Map, Business Hours */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
               {/* Map Card */}
-              <div className="bg-white rounded-xl shadow-lg p-4 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
-                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5899527055087!2d80.63447661477622!3d7.289661994743505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368cf2b1c1c1d%3A0x4c4c8c8c8c8c8c8c!2sGlobal%20Associates%20Kandy!5e0!3m2!1sen!2slk!4v1620000000000!5m2!1sen!2slk"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg"
-                  ></iframe>
-                </div>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <GoogleMap />
               </div>
 
               {/* Business Hours Card */}
@@ -215,31 +205,6 @@ export default function Contact() {
                   <div className="flex justify-between items-center">
                     <span className="text-[#00204A]/70">Sunday</span>
                     <span className="text-[#00204A]">Closed</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Address Card */}
-              <div className="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-[#00204A]/5 rounded-lg">
-                    <HiLocationMarker className="w-6 h-6 text-[#00204A]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#00204A] mb-1">Address</h3>
-                    <p className="text-[#00204A]/70 leading-relaxed">
-                      No 291,<br />
-                      D.S Senanayake Veediya,<br />
-                      Kandy, Sri Lanka
-                    </p>
-                    <a 
-                      href="https://maps.app.goo.gl/example-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
-                    >
-                      View on Google Maps <HiExternalLink className="ml-1" />
-                    </a>
                   </div>
                 </div>
               </div>
