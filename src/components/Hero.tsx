@@ -96,7 +96,7 @@ export default function Hero() {
                   </div>
 
                   <motion.span 
-                    className="inline-block text-[#22B0EB] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                    className="inline-block text-[#22B0EB] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:inline-block block mb-1 sm:mb-0"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,12 +107,7 @@ export default function Hero() {
                       textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
                       filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.15))',
                       position: 'relative',
-                      padding: '0 4px',
-                      display: 'inline-block',
-                      '@media (max-width: 640px)': {
-                        display: 'block',
-                        marginBottom: '0.25rem'
-                      }
+                      padding: '0 4px'
                     }}
                   >
                     <div
@@ -131,17 +126,13 @@ export default function Hero() {
                     Global
                   </motion.span>{' '}
                   <motion.span 
-                    className="inline-block text-[#033A5B] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                    className="inline-block text-[#033A5B] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:inline-block block"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     style={{
                       textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
-                      filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.15))',
-                      display: 'inline-block',
-                      '@media (max-width: 640px)': {
-                        display: 'block'
-                      }
+                      filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.15))'
                     }}
                   >
                     Associates
