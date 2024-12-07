@@ -4,7 +4,6 @@ import OurStory from '../components/about/OurStory';
 import QuoteSection from '../components/about/QuoteSection';
 import Benefits from '../components/about/Benefits';
 import CoreValues from '../components/about/CoreValues';
-import Leadership from '../components/about/Leadership';
 import CompanyOverview from '../components/about/CompanyOverview';
 import { Briefcase, Target, ChevronDown, ChevronUp, GraduationCap, Award as AwardIcon, Briefcase as BriefcaseIcon, Building2 } from 'lucide-react';
 import { Shield, Award, Users, Lightbulb, Users2, Scale } from 'lucide-react';
@@ -78,7 +77,7 @@ const teamMembers = [
       "Financial Consulting"
     ],
     experience: [
-      "Over 16 years in Assurance, Advisory, Internal Audit, and Financial Consulting",
+      "Over 25 years in Assurance, Advisory, Internal Audit, and Financial Consulting",
       "Former Senior Manager at Ernst & Young Qatar (7 years)",
       "Experience with major firms including Ernst & Young (EY) and PricewaterhouseCoopers (PWC)",
       "Instrumental in establishing NAD Qatar and Abacus Dubai",
@@ -122,8 +121,8 @@ const teamMembers = [
       "ERP Applications"
     ],
     experience: [
-      "Over 15 years in Finance and Management Accounting",
-      "More than 10 years of lecturing and training experience",
+      "Over 22 years in Finance and Management Accounting",
+      "More than 20 years of lecturing and training experience",
       "Specialized in implementing and training ERP business applications (ORACLE, SAP)",
       "Experience in training students for CIMA, ACCA, ISACL examinations"
     ],
@@ -545,11 +544,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="bg-white py-6">
-        <Leadership />
       </section>
 
       {/* Benefits with subtle gradient */}

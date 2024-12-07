@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="bg-white/95 rounded-lg p-3 inline-block mb-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(34,176,235,0.12)] transition-shadow duration-300">
+            <div className="bg-white/95 rounded-lg p-3 inline-block mb-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(34,176,235,0.12)] group transition-all duration-300">
               <img 
-                src="https://ik.imagekit.io/d36vkx7c33/gakandy/ga-primary-logo-transparent-bg.png?updatedAt=1733486258478"
+                src="https://ik.imagekit.io/d36vkx7c33/gakandy/logo-wihtout-text.png?updatedAt=1733490143012"
                 alt="Global Associates Logo"
-                className="h-12 w-auto"
+                className="h-12 w-auto transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
               />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -86,7 +86,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-300">
-              © {new Date().getFullYear()} Global Associates. All rights reserved.
+              &copy; {new Date().getFullYear()} Global Associates. All rights reserved.
             </div>
             <div className="text-sm text-gray-300">
               Powered by{' '}
