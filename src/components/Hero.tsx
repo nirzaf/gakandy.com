@@ -96,7 +96,7 @@ export default function Hero() {
                   </div>
 
                   <motion.span 
-                    className="inline-block text-[#22B0EB] royal-text text-2xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:whitespace-nowrap"
+                    className="inline-block text-[#22B0EB] royal-text"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -104,8 +104,8 @@ export default function Hero() {
                       background: 'linear-gradient(145deg, #22B0EB 0%, #28A2D4 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
-                      filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.15))',
+                      textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                      filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.2))',
                       position: 'relative',
                       padding: '0 4px'
                     }}
@@ -123,24 +123,13 @@ export default function Hero() {
                         pointerEvents: 'none'
                       }}
                     />
-                    <span className="sm:hidden">
-                      Performance<br />
-                      Through<br />
-                      Excellence
-                    </span>
-                    <span className="hidden sm:inline">
-                      Performance Through Excellence
-                    </span>
+                    Global
                   </motion.span>{' '}
                   <motion.span 
-                    className="inline-block text-[#033A5B] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:inline-block block"
+                    className="inline-block text-[#033A5B] royal-text"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    style={{
-                      textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
-                      filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.15))'
-                    }}
                   >
                     Associates
                   </motion.span>
@@ -150,199 +139,46 @@ export default function Hero() {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="block text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 mt-4 tracking-wide"
-                  style={{
-                    textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-                    background: 'linear-gradient(to right, #4B5563, #6B7280)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                  }}
+                  className="block text-xl sm:text-2xl font-medium text-gray-600 mt-3"
                 >
                   Chartered Accountants
                 </motion.div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="mt-8 text-xl sm:text-2xl md:text-3xl leading-relaxed text-gray-600 max-w-2xl mx-auto relative emphasis-text font-medium overflow-hidden"
-                style={{
-                  letterSpacing: '0.025em'
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 0.8,
+                  ease: "easeOut"
                 }}
+                className="mt-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto relative emphasis-text"
               >
-                <motion.div
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ 
-                    y: 0,
-                    opacity: 1,
-                    transition: {
-                      duration: 0.8,
-                      delay: 1,
-                      ease: [0.215, 0.610, 0.355, 1.000]
-                    }
-                  }}
-                  className="relative inline-flex items-center gap-3"
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1 }}
+                  className="inline-block"
                 >
-                  <motion.span
-                    className="inline-block font-bold text-[#033A5B] relative glow-text"
-                    style={{
-                      textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
-                    }}
-                    whileHover={{
-                      scale: 1.05,
-                      transition: { duration: 0.2 }
-                    }}
-                  >
-                    <motion.div
-                      className="absolute -inset-1 rounded bg-[#033A5B]/5"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 1.2, duration: 0.3 }}
-                    />
-                    {'Performance'.split('').map((char, index) => (
-                      <motion.span
-                        key={index}
-                        className="inline-block relative"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.2 + index * 0.05 }}
-                      >
-                        {char}
-                        <motion.span
-                          className="absolute inset-0"
-                          initial={{ opacity: 0 }}
-                          animate={{
-                            opacity: [0, 1, 0],
-                            filter: [
-                              'drop-shadow(0 0 0px #033A5B)',
-                              'drop-shadow(0 0 8px #033A5B)',
-                              'drop-shadow(0 0 0px #033A5B)'
-                            ]
-                          }}
-                          transition={{
-                            duration: 1,
-                            delay: 2 + index * 0.1,
-                            repeat: Infinity,
-                            repeatDelay: 4
-                          }}
-                        >
-                          {char}
-                        </motion.span>
-                      </motion.span>
-                    ))}
-                  </motion.span>
-
-                  <motion.span
-                    className="inline-block text-gray-500 font-medium relative"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.4, duration: 0.3 }}
-                  >
-                    {'through'.split('').map((char, index) => (
-                      <motion.span
-                        key={index}
-                        className="inline-block relative"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.4 + index * 0.05 }}
-                      >
-                        {char}
-                        <motion.span
-                          className="absolute inset-0"
-                          initial={{ opacity: 0 }}
-                          animate={{
-                            opacity: [0, 1, 0],
-                            filter: [
-                              'drop-shadow(0 0 0px #6B7280)',
-                              'drop-shadow(0 0 8px #6B7280)',
-                              'drop-shadow(0 0 0px #6B7280)'
-                            ]
-                          }}
-                          transition={{
-                            duration: 1,
-                            delay: 3 + index * 0.1,
-                            repeat: Infinity,
-                            repeatDelay: 4
-                          }}
-                        >
-                          {char}
-                        </motion.span>
-                      </motion.span>
-                    ))}
-                  </motion.span>
-
-                  <motion.span
-                    className="inline-block font-bold relative"
-                    style={{
-                      background: 'linear-gradient(135deg, #033A5B 0%, #22B0EB 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      textShadow: '2px 2px 4px rgba(0,0,0,0.15)',
-                      fontWeight: 800,
-                      letterSpacing: '0.02em'
-                    }}
-                    whileHover={{
-                      scale: 1.05,
-                      transition: { duration: 0.2 }
-                    }}
-                  >
-                    <motion.div
-                      className="absolute -inset-1 rounded bg-[#22B0EB]/10"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 1.6, duration: 0.3 }}
-                    />
-                    {'Excellence'.split('').map((char, index) => (
-                      <motion.span
-                        key={index}
-                        className="inline-block relative"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.6 + index * 0.05 }}
-                        style={{
-                          textShadow: '0 0 1px rgba(34, 176, 235, 0.5)'
-                        }}
-                      >
-                        {char}
-                        <motion.span
-                          className="absolute inset-0"
-                          initial={{ opacity: 0 }}
-                          animate={{
-                            opacity: [0, 1, 0],
-                            filter: [
-                              'drop-shadow(0 0 0px #22B0EB)',
-                              'drop-shadow(0 0 12px #22B0EB)',
-                              'drop-shadow(0 0 0px #22B0EB)'
-                            ]
-                          }}
-                          style={{
-                            background: 'linear-gradient(135deg, #033A5B 0%, #22B0EB 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            fontWeight: 900
-                          }}
-                          transition={{
-                            duration: 1,
-                            delay: 4 + index * 0.1,
-                            repeat: Infinity,
-                            repeatDelay: 4
-                          }}
-                        >
-                          {char}
-                        </motion.span>
-                      </motion.span>
-                    ))}
-                  </motion.span>
-                </motion.div>
-
-                {/* Animated underline */}
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#033A5B]/20 via-[#22B0EB]/40 to-[#033A5B]/20"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ delay: 1.8, duration: 0.8, ease: "easeOut" }}
-                />
+                  Performance
+                </motion.span>{' '}
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.2 }}
+                  className="inline-block text-gray-400"
+                >
+                  through
+                </motion.span>{' '}
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.4 }}
+                  className="inline-block font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#033A5B] to-[#22B0EB]"
+                >
+                  Excellence
+                </motion.span>
               </motion.div>
 
               {/* CTA Buttons */}
