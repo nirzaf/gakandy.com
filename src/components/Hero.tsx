@@ -96,7 +96,7 @@ export default function Hero() {
                   </div>
 
                   <motion.span 
-                    className="inline-block text-[#22B0EB] royal-text text-[1.25rem] xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap"
+                    className="inline-block text-[#22B0EB] royal-text text-2xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl sm:whitespace-nowrap"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -123,7 +123,14 @@ export default function Hero() {
                         pointerEvents: 'none'
                       }}
                     />
-                    Global
+                    <span className="sm:hidden">
+                      Performance<br />
+                      Through<br />
+                      Excellence
+                    </span>
+                    <span className="hidden sm:inline">
+                      Performance Through Excellence
+                    </span>
                   </motion.span>{' '}
                   <motion.span 
                     className="inline-block text-[#033A5B] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:inline-block block"
