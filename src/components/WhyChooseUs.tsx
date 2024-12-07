@@ -1,5 +1,5 @@
-import { Award, Clock, Target, Briefcase, Calendar, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Award, Clock, Target, Briefcase, Calendar, Star, Shield, Users } from 'lucide-react';
 
 const features = [
   {

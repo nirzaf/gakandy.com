@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import QuoteSection from '../components/about/QuoteSection';
 import Benefits from '../components/about/Benefits';
 import { Briefcase, Target, ChevronDown, ChevronUp, GraduationCap, Award as AwardIcon, Briefcase as BriefcaseIcon, Building2 } from 'lucide-react';
 import { Shield, Award, Users, Lightbulb, Users2, Scale } from 'lucide-react';
@@ -30,7 +29,7 @@ const features = [
 
 const timelineItems = [
   {
-    year: '2010',
+    year: '2000',
     description: 'Founded as a small accounting practice in Kandy, focusing on local businesses.',
   },
   {
@@ -546,11 +545,6 @@ export default function AboutPage() {
       {/* Benefits with subtle gradient */}
       <section className="bg-gradient-to-r from-pictonBlue-50 to-pictonBlue-100 py-6">
         <Benefits />
-      </section>
-
-      {/* Quote Section with deep brand color */}
-      <section className="bg-indigoDye-600 py-6">
-        <QuoteSection />
       </section>
 
       {/* Core Values with brand colors */}

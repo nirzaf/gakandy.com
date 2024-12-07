@@ -12,6 +12,8 @@ import ThankYouPage from './pages/ThankYouPage';
 import MissionVision from './components/MissionVision';
 import CoreValues from './components/CoreValues';
 import { Toaster } from 'react-hot-toast';
+import { QuoteHero } from './components/home/QuoteHero';
+import { motion } from 'framer-motion';
 
 function HomePage() {
   return (
@@ -20,6 +22,7 @@ function HomePage() {
       <WhyChooseUs />
       <CoreValues />
       <Services />
+      <QuoteHero />
       <MissionVision />
       <About />
     </div>
