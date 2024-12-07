@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import { RobotHead } from './RobotHead/RobotHead';
 
 export default function Hero() {
   return (
@@ -207,6 +208,16 @@ export default function Hero() {
                 </Link>
               </motion.div>
             </div>
+            
+            {/* Robot Head */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="mt-12"
+            >
+              <RobotHead />
+            </motion.div>
           </div>
         </div>
 
