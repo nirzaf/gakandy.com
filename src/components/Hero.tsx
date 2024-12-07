@@ -96,7 +96,7 @@ export default function Hero() {
                   </div>
 
                   <motion.span 
-                    className="inline-block text-[#22B0EB] royal-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:inline-block block mb-1 sm:mb-0"
+                    className="inline-block text-[#22B0EB] royal-text text-[1.25rem] xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap"
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
