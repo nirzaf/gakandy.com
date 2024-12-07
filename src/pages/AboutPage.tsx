@@ -1,10 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import OurStory from '../components/about/OurStory';
 import QuoteSection from '../components/about/QuoteSection';
 import Benefits from '../components/about/Benefits';
-import CoreValues from '../components/about/CoreValues';
-import CompanyOverview from '../components/about/CompanyOverview';
 import { Briefcase, Target, ChevronDown, ChevronUp, GraduationCap, Award as AwardIcon, Briefcase as BriefcaseIcon, Building2 } from 'lucide-react';
 import { Shield, Award, Users, Lightbulb, Users2, Scale } from 'lucide-react';
 
