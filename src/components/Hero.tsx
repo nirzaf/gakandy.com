@@ -209,13 +209,25 @@ export default function Hero() {
               </motion.div>
             </div>
             
-            {/* Robot Head */}
+            {/* Robot Head Section */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mt-12"
             >
+              {/* We Observe Everything Text */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                className="text-center mb-6"
+              >
+                <span className="text-lg font-medium text-[#033A5B] tracking-wide">
+                  We Observe Everything
+                </span>
+              </motion.div>
+              
               <RobotHead />
             </motion.div>
           </div>
