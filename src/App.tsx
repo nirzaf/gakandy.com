@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -13,7 +14,6 @@ import MissionVision from './components/MissionVision';
 import CoreValues from './components/CoreValues';
 import { Toaster } from 'react-hot-toast';
 import { QuoteHero } from './components/home/QuoteHero';
-import { motion } from 'framer-motion';
 
 function HomePage() {
   return (
@@ -29,6 +29,16 @@ function HomePage() {
   );
 }
 
+function NotFound() {
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    navigate('/');
+  }, [navigate]);
+  
+  return <div>Redirecting...</div>;
+}
+
 function App() {
   return (
     <Router>
@@ -40,6 +50,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/thanks" element={<ThankYouPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <Toaster position="top-right" />
