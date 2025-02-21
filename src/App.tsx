@@ -14,6 +14,7 @@ import MissionVision from './components/MissionVision';
 import CoreValues from './components/CoreValues';
 import { Toaster } from 'react-hot-toast';
 import { QuoteHero } from './components/home/QuoteHero';
+import GlobalRecruiter from './components/home/GlobalRecruiter';
 
 function HomePage() {
   return (
@@ -21,6 +22,7 @@ function HomePage() {
       <Hero />
       <WhyChooseUs />
       <CoreValues />
+      <GlobalRecruiter />
       <Services />
       <QuoteHero />
       <MissionVision />
