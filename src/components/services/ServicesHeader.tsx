@@ -16,9 +16,25 @@ const ServicesHeader: React.FC = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center text-center"
         >
-          <div className="bg-[#FFC635]/10 backdrop-blur-xl p-4 rounded-2xl mb-6 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
-            <Briefcase className="h-8 w-8 text-[#FFC635]" strokeWidth={1.5} />
-          </div>
+          <motion.div 
+            className="bg-[#FFC635]/10 backdrop-blur-xl p-4 rounded-2xl mb-6 shadow-lg shadow-[#FFC635]/20"
+            animate={{ 
+              rotate: [0, -6, 0, 6, 0],
+              y: [0, -10, 0]
+            }}
+            transition={{ 
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            whileHover={{ 
+              scale: 1.1,
+              rotateY: 180,
+              boxShadow: "0px 10px 30px rgba(255, 198, 53, 0.4)"
+            }}
+          >
+            <Briefcase className="h-10 w-10 text-[#FFC635] drop-shadow-md" strokeWidth={1.5} />
+          </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

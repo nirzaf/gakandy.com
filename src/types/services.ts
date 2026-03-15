@@ -4,6 +4,7 @@ export interface ServiceCategory {
   title: string;
   description: string;
   services: string[];
+  icon: LucideIcon;
 }
 
 export interface AdditionalService {

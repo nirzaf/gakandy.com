@@ -95,7 +95,8 @@ const serviceCategories: ServiceCategoryType[] = [
       "Forensic Audit",
       "Special Purpose Audits",
       "Compliance Audits"
-    ]
+    ],
+    icon: ShieldCheck
   },
   {
     title: "Compliance Services",
@@ -106,7 +107,8 @@ const serviceCategories: ServiceCategoryType[] = [
       "Tax Management",
       "Payroll Processing",
       "Statutory Reporting"
-    ]
+    ],
+    icon: Receipt
   },
   {
     title: "Advisory Services",
@@ -117,7 +119,8 @@ const serviceCategories: ServiceCategoryType[] = [
       "Business Diagnostics",
       "Asset Management",
       "Process Optimization"
-    ]
+    ],
+    icon: TrendingUp
   },
   {
     title: "Business Services",
@@ -128,7 +131,8 @@ const serviceCategories: ServiceCategoryType[] = [
       "System Implementation",
       "Internal Control Establishment",
       "Process Flow Development"
-    ]
+    ],
+    icon: Building2
   }
 ];
 
