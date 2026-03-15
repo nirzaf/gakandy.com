@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Award, Clock, Target, Briefcase, Calendar, Star, Shield, Users } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
+import { Award, Clock, Target, Briefcase, Calendar, Star } from 'lucide-react';
 
 const features = [
   {
@@ -40,7 +40,7 @@ const features = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -50,7 +50,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { y: 30, opacity: 0 },
   visible: {
     y: 0,

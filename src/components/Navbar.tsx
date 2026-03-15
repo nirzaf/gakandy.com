@@ -1,14 +1,14 @@
 import { Menu, X, Home, Users, Briefcase, PhoneCall } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 const COMPANY_LOGO = "https://ik.imagekit.io/d36vkx7c33/gakandy/logo-wihtout-text.png?updatedAt=1733490143012";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const satelliteVariants = {
+  const satelliteVariants: Variants = {
     initial: { rotate: 0 },
     animate: {
       rotate: -360,

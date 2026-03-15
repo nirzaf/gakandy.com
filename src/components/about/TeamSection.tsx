@@ -27,7 +27,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ teamMembers }) => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <div key={member.name} className="md:flex md:flex-col">
               <TeamMemberCard member={member} />
             </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FileText, ChartBar, Shield, Building2, Scale, ClipboardCheck, Users } from 'lucide-react';
+import { FileText, ChartBar, Shield, Building2, Scale, Users } from 'lucide-react';
 
 const services = [
   {

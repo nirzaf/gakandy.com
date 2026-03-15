@@ -67,7 +67,7 @@ export default function Benefits() {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit) => (
             <motion.div 
               key={benefit.name}
               variants={fadeInUp}

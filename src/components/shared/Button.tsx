@@ -1,5 +1,5 @@
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface ButtonProps extends Omit<HTMLMotionProps<"button">, 'children'> {

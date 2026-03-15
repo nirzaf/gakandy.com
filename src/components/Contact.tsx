@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HiPhone, HiMail, HiLocationMarker, HiExternalLink } from 'react-icons/hi';
+import { HiPhone, HiMail } from 'react-icons/hi';
 import { supabase } from '../lib/supabase';
 import { ContactFormData } from '../types/contact';
 import { toast } from 'react-hot-toast';

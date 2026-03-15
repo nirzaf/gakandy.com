@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '../utils/animations';
-import { FileText, Database, BrainCircuit, BarChart3, PiggyBank, UserCheck, TrendingUp, Receipt, Building2, LineChart, BookOpen, Wallet, Rocket, Box, ShieldCheck, ArrowRight } from 'lucide-react';
+import { FileText, Database, BrainCircuit, BarChart3, PiggyBank, UserCheck, TrendingUp, Receipt, Building2, LineChart, BookOpen, Wallet, Rocket, Box, ShieldCheck } from 'lucide-react';
 import ServiceCategory from '../components/services/ServiceCategory';
 import AdditionalService from '../components/services/AdditionalService';
 import ServicesCTA from '../components/services/ServicesCTA';

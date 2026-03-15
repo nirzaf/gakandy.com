@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { format, addDays, setHours, setMinutes, startOfWeek, isSameDay } from 'date-fns';
+import React, { useState, useCallback, useMemo } from 'react';
+import { format, setHours, setMinutes, isSameDay } from 'date-fns';
 import { supabase } from '../../lib/supabase';
 
 interface TimeSlot {
@@ -17,7 +17,6 @@ const AppointmentCalendar: React.FC = () => {
   const [currentWeekStart, setCurrentWeekStart] = useState<Date>(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedSlot, setSelectedSlot] = useState<TimeSlot | null>(null);
-  const [bookedSlots, setBookedSlots] = useState<Date[]>([]);
   const [formData, setFormData] = useState<AppointmentFormData>({
     name: '',
     email: '',
@@ -26,75 +25,7 @@ const AppointmentCalendar: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
 
-  // Generate random booked slots for the week when component mounts or week changes
-  useEffect(() => {
-    const generateRandomBookedSlots = () => {
-      const slots: Date[] = [];
-      const weekDays = generateWeekDays();
-      
-      // Generate 5-8 random booked slots for the week
-      const numberOfSlots = Math.floor(Math.random() * 4) + 5; // 5 to 8 slots
-      
-      while (slots.length < numberOfSlots) {
-        // Random day from the current week's weekdays
-        const randomDayIndex = Math.floor(Math.random() * weekDays.length);
-        const date = new Date(weekDays[randomDayIndex]);
-        
-        // Random hour (9-17 for 9 AM to 5:15 PM to allow for 45-min slots ending at 6:00 PM)
-        const randomHour = Math.floor(Math.random() * 9) + 9;
-        // Random minutes (0 or 45 for 45-minute slots)
-        const randomMinutes = Math.random() < 0.5 ? 0 : 45;
-        
-        date.setHours(randomHour, randomMinutes, 0, 0);
-        
-        // Check if slot is already booked and is not in the past
-        const now = new Date();
-        // Ensure the slot doesn't start after 5:15 PM
-        const isValidTime = date.getHours() < 18 || (date.getHours() === 17 && date.getMinutes() <= 15);
-        
-        if (!slots.some(existingSlot => 
-            existingSlot.getTime() === date.getTime()) && 
-            date > now &&
-            isValidTime) {
-          slots.push(date);
-        }
-      }
-      
-      return slots.sort((a, b) => a.getTime() - b.getTime());
-    };
-
-    setBookedSlots(generateRandomBookedSlots());
-  }, [currentWeekStart]); // Regenerate when week changes
-
-  // Generate time slots for a given date (9 AM to 5:15 PM, 45-minute intervals)
-  const generateTimeSlots = (date: Date): TimeSlot[] => {
-    const slots: TimeSlot[] = [];
-    const now = new Date();
-    let currentTime = setHours(setMinutes(date, 0), 9); // Start at 9 AM
-    const endTime = setHours(setMinutes(date, 15), 17); // End at 5:15 PM (last appointment ends at 6:00 PM)
-
-    while (currentTime <= endTime) {
-      // Skip slots that are in the past
-      const isInPast = currentTime < now;
-      const isSlotBooked = bookedSlots.some(bookedTime =>
-        isSameDay(currentTime, bookedTime) &&
-        currentTime.getHours() === bookedTime.getHours() &&
-        currentTime.getMinutes() === bookedTime.getMinutes()
-      );
-
-      slots.push({
-        time: new Date(currentTime),
-        isBooked: isSlotBooked || isInPast
-      });
-
-      currentTime = new Date(currentTime.getTime() + 45 * 60000); // Add 45 minutes
-    }
-
-    return slots;
-  };
-
-  // Generate weekdays starting from current date
-  const generateWeekDays = (): Date[] => {
+  const generateWeekDays = useCallback((): Date[] => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     
@@ -115,6 +46,62 @@ const AppointmentCalendar: React.FC = () => {
     }
     
     return days;
+  }, [currentWeekStart]);
+
+  const generateRandomBookedSlots = useCallback(() => {
+    const slots: Date[] = [];
+    const weekDays = generateWeekDays();
+    
+    const numberOfSlots = Math.floor(Math.random() * 4) + 5;
+    
+    while (slots.length < numberOfSlots) {
+      const randomDayIndex = Math.floor(Math.random() * weekDays.length);
+      const date = new Date(weekDays[randomDayIndex]);
+      
+      const randomHour = Math.floor(Math.random() * 9) + 9;
+      const randomMinutes = Math.random() < 0.5 ? 0 : 45;
+      
+      date.setHours(randomHour, randomMinutes, 0, 0);
+      
+      const now = new Date();
+      const isValidTime = date.getHours() < 18 || (date.getHours() === 17 && date.getMinutes() <= 15);
+      
+      if (!slots.some(existingSlot => 
+          existingSlot.getTime() === date.getTime()) && 
+          date > now &&
+          isValidTime) {
+        slots.push(date);
+      }
+    }
+    
+    return slots.sort((a, b) => a.getTime() - b.getTime());
+  }, [generateWeekDays]);
+
+  const bookedSlots = useMemo(() => generateRandomBookedSlots(), [generateRandomBookedSlots]);
+
+  const generateTimeSlots = (date: Date): TimeSlot[] => {
+    const slots: TimeSlot[] = [];
+    const now = new Date();
+    let currentTime = setHours(setMinutes(date, 0), 9);
+    const endTime = setHours(setMinutes(date, 15), 17);
+
+    while (currentTime <= endTime) {
+      const isInPast = currentTime < now;
+      const isSlotBooked = bookedSlots.some(bookedTime =>
+        isSameDay(currentTime, bookedTime) &&
+        currentTime.getHours() === bookedTime.getHours() &&
+        currentTime.getMinutes() === bookedTime.getMinutes()
+      );
+
+      slots.push({
+        time: new Date(currentTime),
+        isBooked: isSlotBooked || isInPast
+      });
+
+      currentTime = new Date(currentTime.getTime() + 45 * 60000);
+    }
+
+    return slots;
   };
 
   // Function to go to next week
@@ -198,10 +185,11 @@ const AppointmentCalendar: React.FC = () => {
         setStatus('idle');
         setErrorMessage('');
       }, 3000);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error booking appointment:', error);
       setStatus('error');
-      setErrorMessage('An unexpected error occurred. Please try again.');
+      const message = error instanceof Error ? error.message : 'An unexpected error occurred. Please try again.';
+      setErrorMessage(message);
       setTimeout(() => {
         setStatus('idle');
         setErrorMessage('');
