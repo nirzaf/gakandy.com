@@ -1,5 +1,46 @@
 @import "tailwindcss";
 
+@theme {
+  /* Custom Colors */
+  --color-indigoDye-primary: #033A5B;
+  --color-indigoDye-secondary: #0C4D75;
+  --color-indigoDye-tertiary: #084461;
+
+  --color-pictonBlue-primary: #22B0EB;
+  --color-pictonBlue-secondary: #28A2D4;
+
+  --color-lapisLazuli: #126190;
+
+  /* Backgrounds */
+  --color-site-bg: #f8fafc;
+
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+}
+
+/* Custom Container Utility */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (min-width: 640px) {
+    padding-inline: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 4rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-inline: 5rem;
+  }
+
+  @media (min-width: 1536px) {
+    padding-inline: 6rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,7 +50,8 @@ html {
     @apply antialiased text-gray-900;
   }
 
-  input, textarea {
+  input,
+  textarea {
     @apply border-gray-300 focus:ring-blue-500 focus:border-blue-500;
   }
 }
