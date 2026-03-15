@@ -21,9 +21,9 @@ export const CoreValueCard: React.FC<CoreValueCardProps> = ({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="relative group"
     >
-      <div className={`absolute -inset-2 bg-gradient-to-r from-${gradientFrom} to-${gradientTo} rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300`}></div>
+      <div className={`absolute -inset-2 bg-gradient-to-r ${gradientFrom} ${gradientTo} rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300`}></div>
       <div className="relative flex flex-col h-full bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-        <div className={`h-12 w-12 rounded-lg bg-gradient-to-br from-${gradientFrom} to-${gradientTo} p-2 mb-4`}>
+        <div className={`h-12 w-12 rounded-lg bg-gradient-to-br ${gradientFrom} ${gradientTo} p-2 mb-4`}>
           <value.icon className="h-8 w-8 text-white" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>

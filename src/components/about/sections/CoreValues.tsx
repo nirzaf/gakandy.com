@@ -61,12 +61,12 @@ const coreValues: CoreValue[] = [
 ];
 
 const gradientPairs = [
-  { from: '[#033A5B]', to: '[#0C4D75]' },
-  { from: '[#22B0EB]', to: '[#28A2D4]' },
-  { from: '[#0C4D75]', to: '[#126190]' },
-  { from: '[#28A2D4]', to: '[#22B0EB]' },
-  { from: '[#084461]', to: '[#033A5B]' },
-  { from: '[#126190]', to: '[#22B0EB]' },
+  { from: 'from-[#033A5B]', to: 'to-[#0C4D75]' },
+  { from: 'from-[#22B0EB]', to: 'to-[#28A2D4]' },
+  { from: 'from-[#0C4D75]', to: 'to-[#126190]' },
+  { from: 'from-[#28A2D4]', to: 'to-[#22B0EB]' },
+  { from: 'from-[#084461]', to: 'to-[#033A5B]' },
+  { from: 'from-[#126190]', to: 'to-[#22B0EB]' },
 ];
 
 export const CoreValues: React.FC = () => {
