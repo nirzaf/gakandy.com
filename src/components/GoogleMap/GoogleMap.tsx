@@ -15,6 +15,7 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ className = '' }) => {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="Global Associates office location on Google Maps"
       />
     </div>
   );

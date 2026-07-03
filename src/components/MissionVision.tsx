@@ -43,7 +43,7 @@ export default function MissionVision() {
             <div className="relative">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-blue-50 rounded-xl">
-                  <Target className="w-8 h-8 text-blue-600" />
+                  <Target className="w-8 h-8 text-blue-600" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 ml-4">Our Mission</h3>
               </div>
@@ -73,7 +73,7 @@ export default function MissionVision() {
             <div className="relative">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-blue-50 rounded-xl">
-                  <Eye className="w-8 h-8 text-blue-600" />
+                  <Eye className="w-8 h-8 text-blue-600" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 ml-4">Our Vision</h3>
               </div>
@@ -83,7 +83,7 @@ export default function MissionVision() {
               <ul className="space-y-3">
                 {['Industry Leadership', 'Continuous Innovation', 'Regional Excellence'].map((item) => (
                   <li key={item} className="flex items-center text-gray-700">
-                    <ArrowRight className="w-5 h-5 text-blue-600 mr-2" />
+                    <ArrowRight className="w-5 h-5 text-blue-600 mr-2" aria-hidden="true" />
                     {item}
                   </li>
                 ))}

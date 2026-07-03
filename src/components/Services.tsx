@@ -98,7 +98,7 @@ export default function Services() {
                   />
                   {/* Icon Overlay */}
                   <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                    <Icon className={`w-6 h-6 text-[#22B0EB] group-hover:text-[#033A5B] transition-colors duration-300`} />
+                    <Icon className={`w-6 h-6 text-[#22B0EB] group-hover:text-[#033A5B] transition-colors duration-300`} aria-hidden="true" />
                   </div>
                 </div>
 

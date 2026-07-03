@@ -35,7 +35,7 @@ export const AdditionalService: React.FC<AdditionalServiceProps> = ({ title, des
           }}
           className="w-full h-full flex items-center justify-center"
         >
-          <Icon className="w-full h-full text-white drop-shadow-md" />
+          <Icon className="w-full h-full text-white drop-shadow-md" aria-hidden="true" />
         </motion.div>
       </motion.div>
       <h3 className="text-lg font-semibold text-[#033A5B] mb-2 group-hover:text-[#22B0EB] transition-colors duration-300">

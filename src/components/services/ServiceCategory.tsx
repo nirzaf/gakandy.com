@@ -39,7 +39,7 @@ export const ServiceCategory: React.FC<ServiceCategoryProps> = ({ title, descrip
             }}
             className="w-full h-full flex items-center justify-center"
           >
-            <Icon className="w-full h-full text-white drop-shadow-md" />
+            <Icon className="w-full h-full text-white drop-shadow-md" aria-hidden="true" />
           </motion.div>
         </motion.div>
         <h3 className="text-2xl font-bold text-[#033A5B]">{title}</h3>

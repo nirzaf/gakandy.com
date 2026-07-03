@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const ServicesCTA: React.FC = () => (
   <section className="py-16 bg-gradient-to-r from-[#033A5B] to-[#0C4D75] relative overflow-hidden">
@@ -22,13 +23,13 @@ export const ServicesCTA: React.FC = () => (
           Ready to elevate your business with professional financial expertise? Our team is here to provide tailored solutions that drive growth and ensure compliance.
         </p>
         <div className="flex justify-center">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center px-8 py-4 rounded-lg bg-[#22B0EB] text-white font-medium transition-all duration-300 hover:bg-[#28A2D4] hover:scale-105 shadow-lg shadow-[#22B0EB]/25"
           >
             Schedule a Consultation
             <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </motion.div>
     </div>

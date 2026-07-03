@@ -83,11 +83,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#00204A] mb-1">Phone</h3>
-                    <a 
-                      href="tel:+94 81 123 4567" 
+                    <a
+                      href="tel:+94812225488"
                       className="text-lg text-[#00204A]/80 hover:text-[#00204A] hover:underline"
                     >
-                      +94 81 123 4567
+                      +9481-2225 488
                     </a>
                   </div>
                 </div>

@@ -45,17 +45,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-pictonBlue-primary flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-pictonBlue-primary flex-shrink-0 mt-1" aria-hidden="true" />
                 <span className="text-gray-300 text-sm">
                   No 291, D.S Senanayake Veediya, Kandy, Sri Lanka
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-pictonBlue-primary flex-shrink-0" />
+                <Phone className="w-5 h-5 text-pictonBlue-primary flex-shrink-0" aria-hidden="true" />
                 <span className="text-gray-300 text-sm">+9481-2225 488</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-pictonBlue-primary flex-shrink-0" />
+                <Mail className="w-5 h-5 text-pictonBlue-primary flex-shrink-0" aria-hidden="true" />
                 <a href="mailto:info@gakandy.com" className="text-gray-300 hover:text-pictonBlue-primary transition-colors text-sm">
                   info@gakandy.com
                 </a>
@@ -67,14 +67,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-pictonBlue-primary transition-colors">
-                <Facebook className="w-6 h-6" />
+              <a href="#" aria-label="Facebook" className="text-gray-300 hover:text-pictonBlue-primary transition-colors">
+                <Facebook className="w-6 h-6" aria-hidden="true" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pictonBlue-primary transition-colors">
-                <Linkedin className="w-6 h-6" />
+              <a href="#" aria-label="LinkedIn" className="text-gray-300 hover:text-pictonBlue-primary transition-colors">
+                <Linkedin className="w-6 h-6" aria-hidden="true" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pictonBlue-primary transition-colors">
-                <Twitter className="w-6 h-6" />
+              <a href="#" aria-label="Twitter" className="text-gray-300 hover:text-pictonBlue-primary transition-colors">
+                <Twitter className="w-6 h-6" aria-hidden="true" />
               </a>
             </div>
           </div>

@@ -33,7 +33,7 @@ const ServicesHeader: React.FC = () => {
               boxShadow: "0px 10px 30px rgba(255, 198, 53, 0.4)"
             }}
           >
-            <Briefcase className="h-10 w-10 text-[#FFC635] drop-shadow-md" strokeWidth={1.5} />
+            <Briefcase className="h-10 w-10 text-[#FFC635] drop-shadow-md" strokeWidth={1.5} aria-hidden="true" />
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

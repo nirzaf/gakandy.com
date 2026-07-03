@@ -27,7 +27,7 @@ export const QuoteHero: React.FC = () => {
             className="flex justify-center mb-6"
           >
             <div className="w-12 h-12 bg-gradient-to-br from-[#033A5B] to-[#22B0EB] rounded-full flex items-center justify-center shadow-lg shadow-blue-200/50">
-              <Quote className="w-6 h-6 text-white" />
+              <Quote className="w-6 h-6 text-white" aria-hidden="true" />
             </div>
           </motion.div>
 
